@@ -13,7 +13,7 @@ namespace WindowsFormsApp6
 {
     public partial class salle_de_marché : Form
     {
-
+        MySqlCommand sqlCommand;
         public salle_de_marché()
         {
 
@@ -68,12 +68,13 @@ namespace WindowsFormsApp6
             Console.WriteLine(user);
             Console.WriteLine(pwd);
 
-            string connetionString = "server= 78.123.62.241; uid= " + user+"; password="+pwd+"; Database= ppe;";
+            string connetionString = "server=78.123.62.241;uid=" + user+";password="+pwd+";database=ppe;";
             try
             {
                 MySqlConnection cnn = new MySqlConnection(connetionString);
                 cnn.Open();
                 label1.BackColor = Color.Green;
+                sqlCommand = cnn.CreateCommand();
             }
             catch (Exception exc)
             {
@@ -105,7 +106,7 @@ namespace WindowsFormsApp6
 
         private void ajouterUnePersonneToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ajout_personnel form2 = new ajout_personnel();
+            ajout_personnel form2 = new ajout_personnel(sqlCommand);
             form2.ShowDialog();
         }
 

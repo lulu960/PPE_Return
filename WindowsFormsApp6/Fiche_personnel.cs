@@ -26,5 +26,10 @@ namespace WindowsFormsApp6
         {
             this.Close();
         }
+
+        private void Fiche_personnel_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

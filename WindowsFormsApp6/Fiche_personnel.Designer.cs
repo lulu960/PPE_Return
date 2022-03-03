@@ -193,7 +193,7 @@ namespace WindowsFormsApp6
             | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(31, 246);
+            this.checkBox1.Location = new System.Drawing.Point(24, 243);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.checkBox1.Size = new System.Drawing.Size(110, 17);
@@ -208,7 +208,7 @@ namespace WindowsFormsApp6
             | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBox2.AutoSize = true;
             this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Location = new System.Drawing.Point(20, 207);
+            this.checkBox2.Location = new System.Drawing.Point(17, 207);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.checkBox2.Size = new System.Drawing.Size(117, 17);
@@ -223,7 +223,7 @@ namespace WindowsFormsApp6
             | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBox3.AutoSize = true;
             this.checkBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox3.Location = new System.Drawing.Point(53, 170);
+            this.checkBox3.Location = new System.Drawing.Point(41, 170);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.checkBox3.Size = new System.Drawing.Size(93, 17);
@@ -257,6 +257,7 @@ namespace WindowsFormsApp6
             this.MinimumSize = new System.Drawing.Size(721, 403);
             this.Name = "Fiche_personnel";
             this.Text = "Fiche_personnel";
+            this.Load += new System.EventHandler(this.Fiche_personnel_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
