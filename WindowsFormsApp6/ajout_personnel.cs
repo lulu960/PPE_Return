@@ -82,13 +82,13 @@ namespace WindowsFormsApp6
                 lecteur.Close();
                 if (checkBoxNoDate.Checked == false)
                 {
-                    sqlCommand.CommandText = "INSERT INTO attribuer (ID_categorie, ID_personnel, date_debut, date-fin) VALUES ('" +id_categorie+"',"+ID+",'"+ dateTimeDebut.Value.ToString("u").Substring(0, 19) + "', '" + dateTimeFin.Value.ToString("u").Substring(0, 19) + "')";
+                    sqlCommand.CommandText = "INSERT INTO attribuer (ID_categorie, ID_personnel, date_debut, date_fin) VALUES ('" +id_categorie+"',"+ID+",'"+ dateTimeDebut.Value.ToString("u").Substring(0, 19) + "', '" + dateTimeFin.Value.ToString("u").Substring(0, 19) + "')";
                     sqlCommand.ExecuteNonQuery();
 
                 }
                 else
                 {
-                    sqlCommand.CommandText = "INSERT INTO attribuer (ID_categorie, ID_personnel, date_debut, date-fin) VALUES ('" + id_categorie + "'," + ID + ",'" + dateTimeDebut.Value.ToString("u").Substring(0, 19) + "')";
+                    sqlCommand.CommandText = "INSERT INTO attribuer (ID_categorie, ID_personnel, date_debut) VALUES ('" + id_categorie + "'," + ID + ",'" + dateTimeDebut.Value.ToString("u").Substring(0, 19) + "')";
                     sqlCommand.ExecuteNonQuery();
                 }
                 sqlCommand.CommandText = "commit";
