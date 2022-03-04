@@ -69,7 +69,7 @@ namespace WindowsFormsApp6
                 sqlCommand.CommandText = "INSERT INTO personnel (Nom, Prenom, mot_de_passe) VALUES ('" + textBoxNom.Text + "', '" + textBoxPrenom.Text + "', '" + textBoxNom.Text + "')";
                 sqlCommand.ExecuteNonQuery();
                 MySqlDataReader lecteur;
-                sqlCommand.CommandText = "SELECT Last_Insert_ID() FROM personnel";
+                sqlCommand.CommandText = "SELECT Last_Insert_ID()";
                 lecteur = sqlCommand.ExecuteReader();
                 if (lecteur.HasRows)
                 {
@@ -95,9 +95,10 @@ namespace WindowsFormsApp6
                 sqlCommand.ExecuteNonQuery();
             }
 
-            catch
+            catch (Exception ex)
             {
                 sqlCommand.CommandText = "rollback";
+                MessageBox.Show(ex.Message);
                 sqlCommand.ExecuteNonQuery();
             }
         }
