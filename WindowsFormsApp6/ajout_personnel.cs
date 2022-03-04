@@ -93,13 +93,15 @@ namespace WindowsFormsApp6
                 }
                 sqlCommand.CommandText = "commit";
                 sqlCommand.ExecuteNonQuery();
+                MessageBox.Show("L'utilisateur a été créer");
             }
 
             catch (Exception ex)
             {
                 sqlCommand.CommandText = "rollback";
-                MessageBox.Show(ex.Message);
                 sqlCommand.ExecuteNonQuery();
+                MessageBox.Show(ex.Message);
+
             }
         }
 
