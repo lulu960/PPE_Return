@@ -34,19 +34,20 @@ namespace WindowsFormsApp6
 
         private void button1_Click(object sender, EventArgs e)
         {
-            sqlCommand.CommandText = "start transaction";
-            sqlCommand.ExecuteNonQuery();
             MySqlDataReader lecteur;
             sqlCommand.CommandText = "SELECT Nom , Mot_de_passe FROM ppe.personnel where Nom ='"+textBoxID.Text+"' && Mot_de_passe = '"+textBoxID.Text+"';";
             lecteur = sqlCommand.ExecuteReader();
             if (lecteur.HasRows)
             {
-                lecteur.Close();
+
                 ChangementMDP ChangementMDP = new ChangementMDP(textBoxID.Text, sqlCommand);
+                lecteur.Close();
                 ChangementMDP.ShowDialog();
                 ChangementMDP.Dispose();
+                
             }
-            else {
+            else
+            {
                 try
                 {
                     string source = textBoxMDP.Text;
@@ -68,6 +69,11 @@ namespace WindowsFormsApp6
                 }
             }
             
+        }
+
+        private void connexion_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
