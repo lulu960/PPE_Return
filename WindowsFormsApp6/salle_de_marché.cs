@@ -87,6 +87,7 @@ namespace WindowsFormsApp6
         {
             connexion form3 = new connexion();
             form3.ShowDialog();
+            form3.Dispose();
         }
 
         private void testToolStripMenuItem_Click(object sender, EventArgs e)
@@ -108,6 +109,7 @@ namespace WindowsFormsApp6
         {
             ajout_personnel form2 = new ajout_personnel(sqlCommand);
             form2.ShowDialog();
+            form2.Dispose();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -119,18 +121,21 @@ namespace WindowsFormsApp6
         {
             Form4 form4 = new Form4();
             form4.ShowDialog();
+            form4.Dispose();
         }
 
         private void gérerLesBudgetsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             budgets budgets = new budgets();
             budgets.ShowDialog();
+            budgets.Dispose();
         }
 
         private void testFicherPersoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Fiche_personnel fiche_personnel = new Fiche_personnel();
             fiche_personnel.ShowDialog();
+            fiche_personnel.Dispose();
         }
 
         private void administrationToolStripMenuItem_Click(object sender, EventArgs e)
