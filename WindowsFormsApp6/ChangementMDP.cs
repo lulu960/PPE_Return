@@ -41,7 +41,8 @@ namespace WindowsFormsApp6
                         sqlCommand.ExecuteNonQuery();
                         sqlCommand.CommandText = "Update personnel SET Mot_de_passe = ('" + hash + "') where Nom = ('" + IDEnregistree + "')";
                         sqlCommand.ExecuteNonQuery();
-                        MessageBox.Show(IDEnregistree);
+                        MessageBox.Show("Votre mot de passe a bien été enregistré.");
+                        this.Close();
                     }
 
                     catch (Exception ex)

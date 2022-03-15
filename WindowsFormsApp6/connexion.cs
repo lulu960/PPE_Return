@@ -39,15 +39,14 @@ namespace WindowsFormsApp6
             lecteur = sqlCommand.ExecuteReader();
             if (lecteur.HasRows)
             {
-
                 ChangementMDP ChangementMDP = new ChangementMDP(textBoxID.Text, sqlCommand);
                 lecteur.Close();
                 ChangementMDP.ShowDialog();
                 ChangementMDP.Dispose();
-                
             }
             else
             {
+                lecteur.Close();
                 try
                 {
                     string source = textBoxMDP.Text;
@@ -57,15 +56,24 @@ namespace WindowsFormsApp6
                         byte[] sourceBytes = Encoding.UTF8.GetBytes(source);
                         byte[] hashBytes = sha512Hash.ComputeHash(sourceBytes);
                         string hash = BitConverter.ToString(hashBytes).Replace("-", String.Empty);
-
-                        MessageBox.Show("The SHA512 hash of " + source + " is: " + hash);
+                        sqlCommand.CommandText = "SELECT Nom , Mot_de_passe FROM ppe.personnel where Nom ='" + textBoxID.Text + "' && Mot_de_passe = '" + hash + "';";
+                        lecteur = sqlCommand.ExecuteReader();
+                        if (lecteur.HasRows)
+                        {
+                            MessageBox.Show("Bienvenue " + textBoxID.Text + ".");
+                            this.Close();
+                            lecteur.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Mot de passe ou identifiant incorrect");
+                            lecteur.Close();
+                        }
                     }
-
                 }
-
-                catch (Exception ex)
+                catch
                 {
-                    MessageBox.Show(ex.Message);
+                    lecteur.Close();
                 }
             }
             
