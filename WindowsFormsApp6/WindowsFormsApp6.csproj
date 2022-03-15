@@ -55,6 +55,12 @@
     <Compile Include="budgets.Designer.cs">
       <DependentUpon>budgets.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChangementMDP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangementMDP.Designer.cs">
+      <DependentUpon>ChangementMDP.cs</DependentUpon>
+    </Compile>
     <Compile Include="Fiche_personnel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="budgets.resx">
       <DependentUpon>budgets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangementMDP.resx">
+      <DependentUpon>ChangementMDP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Fiche_personnel.resx">
       <DependentUpon>Fiche_personnel.cs</DependentUpon>

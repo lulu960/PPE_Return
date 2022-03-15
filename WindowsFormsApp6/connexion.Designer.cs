@@ -33,7 +33,7 @@ namespace WindowsFormsApp6
             this.btnVald = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxMDP = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -89,16 +89,16 @@ namespace WindowsFormsApp6
             this.textBoxMDP.TabIndex = 18;
             this.textBoxMDP.UseSystemPasswordChar = true;
             // 
-            // textBox1
+            // textBoxID
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.textBoxID.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(112, 19);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(228, 20);
-            this.textBox1.TabIndex = 17;
+            this.textBoxID.Location = new System.Drawing.Point(112, 19);
+            this.textBoxID.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxID.Name = "textBoxID";
+            this.textBoxID.Size = new System.Drawing.Size(228, 20);
+            this.textBoxID.TabIndex = 17;
             // 
             // label1
             // 
@@ -123,7 +123,7 @@ namespace WindowsFormsApp6
             this.ClientSize = new System.Drawing.Size(348, 136);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxMDP);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxID);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btnVald);
@@ -143,7 +143,7 @@ namespace WindowsFormsApp6
         private System.Windows.Forms.Button btnVald;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxMDP;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxID;
         private System.Windows.Forms.Label label1;
     }
 }

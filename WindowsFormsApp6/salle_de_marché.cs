@@ -85,7 +85,7 @@ namespace WindowsFormsApp6
 
         private void personnelToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            connexion form3 = new connexion();
+            connexion form3 = new connexion(sqlCommand);
             form3.ShowDialog();
             form3.Dispose();
         }

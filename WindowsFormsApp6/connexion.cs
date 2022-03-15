@@ -8,14 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.Cryptography;
+using MySql.Data.MySqlClient;
 
 namespace WindowsFormsApp6
 {
     public partial class connexion : Form
     {
-        public connexion()
+        MySqlCommand sqlCommand;
+        string dataBaseName;
+        public connexion(MySqlCommand sqlC)
         {
             InitializeComponent();
+            sqlCommand = sqlC;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -30,23 +34,40 @@ namespace WindowsFormsApp6
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
+            sqlCommand.CommandText = "start transaction";
+            sqlCommand.ExecuteNonQuery();
+            MySqlDataReader lecteur;
+            sqlCommand.CommandText = "SELECT Nom , Mot_de_passe FROM ppe.personnel where Nom ='"+textBoxID.Text+"' && Mot_de_passe = '"+textBoxID.Text+"';";
+            lecteur = sqlCommand.ExecuteReader();
+            if (lecteur.HasRows)
             {
-                string source = textBoxMDP.Text;
-                using (SHA256 sha256Hash = SHA256.Create())
+                lecteur.Close();
+                ChangementMDP ChangementMDP = new ChangementMDP(textBoxID.Text, sqlCommand);
+                ChangementMDP.ShowDialog();
+                ChangementMDP.Dispose();
+            }
+            else {
+                try
                 {
-                    //From String to byte array
-                    byte[] sourceBytes = Encoding.UTF8.GetBytes(source);
-                    byte[] hashBytes = sha256Hash.ComputeHash(sourceBytes);
-                    string hash = BitConverter.ToString(hashBytes).Replace("-", String.Empty);
+                    string source = textBoxMDP.Text;
+                    using (SHA512 sha512Hash = SHA512.Create())
+                    {
+                        //From String to byte array
+                        byte[] sourceBytes = Encoding.UTF8.GetBytes(source);
+                        byte[] hashBytes = sha512Hash.ComputeHash(sourceBytes);
+                        string hash = BitConverter.ToString(hashBytes).Replace("-", String.Empty);
 
-                    MessageBox.Show("The SHA256 hash of " + source + " is: " + hash);
+                        MessageBox.Show("The SHA512 hash of " + source + " is: " + hash);
+                    }
+
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            
         }
     }
 }
