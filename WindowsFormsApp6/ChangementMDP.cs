@@ -60,6 +60,18 @@ namespace WindowsFormsApp6
         {
 
         }
+
+        private void cbxVisibleMDP_CheckedChanged(object sender, EventArgs e)
+        {
+            if(cbxVisibleMDP.Checked == true)
+            {
+                textBoxNvMDP1.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                textBoxNvMDP1.UseSystemPasswordChar = true;
+            }
+        }
     }
     }
 

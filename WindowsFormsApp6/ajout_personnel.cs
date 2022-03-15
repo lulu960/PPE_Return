@@ -94,6 +94,7 @@ namespace WindowsFormsApp6
                 sqlCommand.CommandText = "commit";
                 sqlCommand.ExecuteNonQuery();
                 MessageBox.Show("L'utilisateur a été créer");
+                this.Close();
             }
 
             catch (Exception ex)

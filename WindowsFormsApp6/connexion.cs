@@ -35,7 +35,7 @@ namespace WindowsFormsApp6
         private void button1_Click(object sender, EventArgs e)
         {
             MySqlDataReader lecteur;
-            sqlCommand.CommandText = "SELECT Nom , Mot_de_passe FROM ppe.personnel where Nom ='"+textBoxID.Text+"' && Mot_de_passe = '"+textBoxID.Text+"';";
+            sqlCommand.CommandText = "SELECT Nom , Mot_de_passe FROM ppe.personnel where Nom ='"+textBoxID.Text+"' AND Mot_de_passe = '"+textBoxMDP.Text+"';";
             lecteur = sqlCommand.ExecuteReader();
             if (lecteur.HasRows)
             {
