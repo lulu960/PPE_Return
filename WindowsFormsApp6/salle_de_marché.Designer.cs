@@ -45,6 +45,7 @@ namespace WindowsFormsApp6
             this.aProposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administrationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
+            this.coursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,7 +81,7 @@ namespace WindowsFormsApp6
             // personnelToolStripMenuItem
             // 
             this.personnelToolStripMenuItem.Name = "personnelToolStripMenuItem";
-            this.personnelToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.personnelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.personnelToolStripMenuItem.Text = "Connexion ";
             this.personnelToolStripMenuItem.Click += new System.EventHandler(this.personnelToolStripMenuItem_Click);
             // 
@@ -88,14 +89,14 @@ namespace WindowsFormsApp6
             // 
             this.tooldeco.Enabled = false;
             this.tooldeco.Name = "tooldeco";
-            this.tooldeco.Size = new System.Drawing.Size(147, 22);
+            this.tooldeco.Size = new System.Drawing.Size(180, 22);
             this.tooldeco.Text = "Déconnexion ";
             this.tooldeco.Click += new System.EventHandler(this.tooldeco_Click);
             // 
             // quitterToolStripMenuItem
             // 
             this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.quitterToolStripMenuItem.Text = "Quitter ";
             this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
             // 
@@ -140,6 +141,8 @@ namespace WindowsFormsApp6
             // 
             // produitsToolStripMenuItem
             // 
+            this.produitsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.coursToolStripMenuItem});
             this.produitsToolStripMenuItem.Name = "produitsToolStripMenuItem";
             this.produitsToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
             this.produitsToolStripMenuItem.Text = "Produits";
@@ -184,6 +187,12 @@ namespace WindowsFormsApp6
             this.label1.Text = "Etat_bd";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // coursToolStripMenuItem
+            // 
+            this.coursToolStripMenuItem.Name = "coursToolStripMenuItem";
+            this.coursToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.coursToolStripMenuItem.Text = "Cours";
+            // 
             // salle_de_marché
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -221,6 +230,7 @@ namespace WindowsFormsApp6
         private System.Windows.Forms.ToolStripMenuItem administrationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem testFicherPersoToolStripMenuItem;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem coursToolStripMenuItem;
     }
 }
 
