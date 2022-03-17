@@ -36,9 +36,6 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Lib">
-      <HintPath>..\lib\Lib.dll</HintPath>
-    </Reference>
     <Reference Include="libe">
       <HintPath>..\lib\libe.dll</HintPath>
     </Reference>
