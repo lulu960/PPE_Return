@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.Cryptography;
 using MySql.Data.MySqlClient;
+using Lib;
+using libe;
 
 namespace WindowsFormsApp6
 {
@@ -49,14 +51,11 @@ namespace WindowsFormsApp6
                 lecteur.Close();
                 try
                 {
+                    
                     string source = textBoxMDP.Text;
-                    using (SHA512 sha512Hash = SHA512.Create())
-                    {
-                        //From String to byte array
-                        byte[] sourceBytes = Encoding.UTF8.GetBytes(source);
-                        byte[] hashBytes = sha512Hash.ComputeHash(sourceBytes);
-                        string hash = BitConverter.ToString(hashBytes).Replace("-", String.Empty);
-                        sqlCommand.CommandText = "SELECT Nom , Mot_de_passe FROM ppe.personnel where Nom ='" + textBoxID.Text + "' && Mot_de_passe = '" + hash + "';";
+
+                    string mdp = Libe.Hash(source);
+                        sqlCommand.CommandText = "SELECT Nom , Mot_de_passe FROM ppe.personnel where Nom ='" + textBoxID.Text + "' && Mot_de_passe = '" + mdp + "';";
                         lecteur = sqlCommand.ExecuteReader();
                         if (lecteur.HasRows)
                         {
@@ -70,7 +69,7 @@ namespace WindowsFormsApp6
                             MessageBox.Show("Mot de passe ou identifiant incorrect");
                             lecteur.Close();
                         }
-                    }
+                    
                 }
                 catch
                 {
