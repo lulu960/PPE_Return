@@ -194,6 +194,16 @@ namespace WindowsFormsApp6
             this.label1.Text = "Etat_bd";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+<<<<<<< HEAD
+=======
+            // coursToolStripMenuItem
+            // 
+            this.coursToolStripMenuItem.Name = "coursToolStripMenuItem";
+            this.coursToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.coursToolStripMenuItem.Text = "Cours";
+            this.coursToolStripMenuItem.Click += new System.EventHandler(this.coursToolStripMenuItem_Click);
+            // 
+>>>>>>> 874cec191388604d67e22978aa880c67cd9a67b3
             // salle_de_marché
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
