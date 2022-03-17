@@ -40,6 +40,7 @@ namespace WindowsFormsApp6
             this.Cours_gridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Cours_gridview.Location = new System.Drawing.Point(12, 12);
             this.Cours_gridview.Name = "Cours_gridview";
+            this.Cours_gridview.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.Cours_gridview.Size = new System.Drawing.Size(776, 371);
             this.Cours_gridview.TabIndex = 0;
             this.Cours_gridview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
