@@ -40,12 +40,12 @@ namespace WindowsFormsApp6
             this.gérerLesBudgetsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testFicherPersoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.produitsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.coursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.opérationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.documentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administrationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
-            this.coursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,7 +81,7 @@ namespace WindowsFormsApp6
             // personnelToolStripMenuItem
             // 
             this.personnelToolStripMenuItem.Name = "personnelToolStripMenuItem";
-            this.personnelToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.personnelToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.personnelToolStripMenuItem.Text = "Connexion ";
             this.personnelToolStripMenuItem.Click += new System.EventHandler(this.personnelToolStripMenuItem_Click);
             // 
@@ -89,14 +89,14 @@ namespace WindowsFormsApp6
             // 
             this.tooldeco.Enabled = false;
             this.tooldeco.Name = "tooldeco";
-            this.tooldeco.Size = new System.Drawing.Size(180, 22);
+            this.tooldeco.Size = new System.Drawing.Size(147, 22);
             this.tooldeco.Text = "Déconnexion ";
             this.tooldeco.Click += new System.EventHandler(this.tooldeco_Click);
             // 
             // quitterToolStripMenuItem
             // 
             this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.quitterToolStripMenuItem.Text = "Quitter ";
             this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
             // 
@@ -147,6 +147,13 @@ namespace WindowsFormsApp6
             this.produitsToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
             this.produitsToolStripMenuItem.Text = "Produits";
             // 
+            // coursToolStripMenuItem
+            // 
+            this.coursToolStripMenuItem.Name = "coursToolStripMenuItem";
+            this.coursToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.coursToolStripMenuItem.Text = "Cours";
+            this.coursToolStripMenuItem.Click += new System.EventHandler(this.coursToolStripMenuItem_Click);
+            // 
             // opérationsToolStripMenuItem
             // 
             this.opérationsToolStripMenuItem.Name = "opérationsToolStripMenuItem";
@@ -186,12 +193,6 @@ namespace WindowsFormsApp6
             this.label1.TabIndex = 1;
             this.label1.Text = "Etat_bd";
             this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // coursToolStripMenuItem
-            // 
-            this.coursToolStripMenuItem.Name = "coursToolStripMenuItem";
-            this.coursToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.coursToolStripMenuItem.Text = "Cours";
             // 
             // salle_de_marché
             // 

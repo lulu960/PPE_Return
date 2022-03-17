@@ -52,3 +52,4 @@ C:\Users\victo\source\repos\PPE_Return\WindowsFormsApp6\obj\Debug\WindowsFormsAp
 C:\Users\victo\source\repos\PPE_Return\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.csproj.CopyComplete
 C:\Users\victo\source\repos\PPE_Return\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.exe
 C:\Users\victo\source\repos\PPE_Return\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.pdb
+C:\Users\victo\source\repos\PPE_Return\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.Cours.resources
