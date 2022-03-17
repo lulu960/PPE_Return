@@ -142,5 +142,12 @@ namespace WindowsFormsApp6
         {
 
         }
+
+        private void coursToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Cours Cours = new Cours();
+            Cours.ShowDialog();
+            Cours.Dispose();
+        }
     }
 }
