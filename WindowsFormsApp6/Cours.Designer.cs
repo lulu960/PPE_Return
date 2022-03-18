@@ -54,7 +54,11 @@ namespace WindowsFormsApp6
             this.btnRefresh.Size = new System.Drawing.Size(174, 33);
             this.btnRefresh.TabIndex = 1;
             this.btnRefresh.Text = "Rafraîchir";
+<<<<<<< HEAD
             this.btnRefresh.UseVisualStyleBackColor = false;
+=======
+            this.btnRefresh.UseVisualStyleBackColor = true;
+>>>>>>> e7c87de541f073e882e3446375944d7353a57412
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // Quitbtn

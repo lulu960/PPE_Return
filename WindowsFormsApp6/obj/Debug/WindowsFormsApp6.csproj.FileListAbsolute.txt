@@ -52,6 +52,9 @@ C:\Users\victo\source\repos\PPE_Return\WindowsFormsApp6\obj\Debug\WindowsFormsAp
 C:\Users\victo\source\repos\PPE_Return\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.csproj.CopyComplete
 C:\Users\victo\source\repos\PPE_Return\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.exe
 C:\Users\victo\source\repos\PPE_Return\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.pdb
+<<<<<<< HEAD
+C:\Users\victo\source\repos\PPE_Return\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.Cours.resources
+=======
 C:\Users\polog\source\repos\PPE_Return\WindowsFormsApp6\bin\Debug\WindowsFormsApp6.exe.config
 C:\Users\polog\source\repos\PPE_Return\WindowsFormsApp6\bin\Debug\WindowsFormsApp6.exe
 C:\Users\polog\source\repos\PPE_Return\WindowsFormsApp6\bin\Debug\WindowsFormsApp6.pdb
@@ -71,3 +74,4 @@ C:\Users\polog\source\repos\PPE_Return\WindowsFormsApp6\obj\Debug\WindowsFormsAp
 C:\Users\polog\source\repos\PPE_Return\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.csproj.CopyComplete
 C:\Users\polog\source\repos\PPE_Return\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.exe
 C:\Users\polog\source\repos\PPE_Return\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.pdb
+>>>>>>> 874cec191388604d67e22978aa880c67cd9a67b3

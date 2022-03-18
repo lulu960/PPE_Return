@@ -14,6 +14,10 @@ namespace WindowsFormsApp6
     public partial class Cours : Form
     {
         MySqlCommand sqlCommand;
+<<<<<<< HEAD
+=======
+        MySqlConnection connect;
+>>>>>>> e7c87de541f073e882e3446375944d7353a57412
         public Cours(MySqlCommand sqlC)
         {
             InitializeComponent();
@@ -27,7 +31,11 @@ namespace WindowsFormsApp6
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             MySqlDataAdapter sqlDa = new MySqlDataAdapter("Select * from libelles", sqlCommand.Connection);
+=======
+            MySqlDataAdapter sqlDa = new MySqlDataAdapter("Select * from libelles",sqlCommand.Connection);
+>>>>>>> e7c87de541f073e882e3446375944d7353a57412
             DataTable dt1 = new DataTable();
             sqlDa.Fill(dt1);
 
