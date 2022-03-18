@@ -47,21 +47,26 @@ namespace WindowsFormsApp6
             // 
             // btnRefresh
             // 
+            this.btnRefresh.BackColor = System.Drawing.Color.LightBlue;
+            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.Location = new System.Drawing.Point(12, 400);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(174, 33);
             this.btnRefresh.TabIndex = 1;
             this.btnRefresh.Text = "Rafraîchir";
-            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // Quitbtn
             // 
+            this.Quitbtn.BackColor = System.Drawing.Color.IndianRed;
+            this.Quitbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Quitbtn.Location = new System.Drawing.Point(614, 400);
             this.Quitbtn.Name = "Quitbtn";
             this.Quitbtn.Size = new System.Drawing.Size(174, 33);
             this.Quitbtn.TabIndex = 2;
             this.Quitbtn.Text = "Quitter";
-            this.Quitbtn.UseVisualStyleBackColor = true;
+            this.Quitbtn.UseVisualStyleBackColor = false;
             // 
             // Cours
             // 
