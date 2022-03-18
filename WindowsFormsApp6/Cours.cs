@@ -22,6 +22,8 @@ namespace WindowsFormsApp6
             DataTable dt1 = new DataTable();
             sqlDa.Fill(dt1);
             Cours_gridview.DataSource = dt1;
+            Cours_gridview.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            Cours_gridview.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
         private void Quitbtn_Click(object sender, EventArgs e)
