@@ -40,14 +40,14 @@ namespace WindowsFormsApp6
             this.gérerLesBudgetsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testFicherPersoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.produitsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.coursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.opérationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.documentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administrationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
-            this.coursToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.créationDesTablesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.remplirLesTablesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -149,6 +149,13 @@ namespace WindowsFormsApp6
             this.produitsToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
             this.produitsToolStripMenuItem.Text = "Produits";
             // 
+            // coursToolStripMenuItem
+            // 
+            this.coursToolStripMenuItem.Name = "coursToolStripMenuItem";
+            this.coursToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.coursToolStripMenuItem.Text = "Cours";
+            this.coursToolStripMenuItem.Click += new System.EventHandler(this.coursToolStripMenuItem_Click);
+            // 
             // opérationsToolStripMenuItem
             // 
             this.opérationsToolStripMenuItem.Name = "opérationsToolStripMenuItem";
@@ -178,6 +185,18 @@ namespace WindowsFormsApp6
             this.administrationToolStripMenuItem.Visible = false;
             this.administrationToolStripMenuItem.Click += new System.EventHandler(this.administrationToolStripMenuItem_Click);
             // 
+            // créationDesTablesToolStripMenuItem
+            // 
+            this.créationDesTablesToolStripMenuItem.Name = "créationDesTablesToolStripMenuItem";
+            this.créationDesTablesToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.créationDesTablesToolStripMenuItem.Text = "Création des tables";
+            // 
+            // remplirLesTablesToolStripMenuItem
+            // 
+            this.remplirLesTablesToolStripMenuItem.Name = "remplirLesTablesToolStripMenuItem";
+            this.remplirLesTablesToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.remplirLesTablesToolStripMenuItem.Text = "Remplir les tables";
+            // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -191,24 +210,6 @@ namespace WindowsFormsApp6
             this.label1.TabIndex = 1;
             this.label1.Text = "Etat_bd";
             this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // coursToolStripMenuItem
-            // 
-            this.coursToolStripMenuItem.Name = "coursToolStripMenuItem";
-            this.coursToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.coursToolStripMenuItem.Text = "Cours";
-            // 
-            // créationDesTablesToolStripMenuItem
-            // 
-            this.créationDesTablesToolStripMenuItem.Name = "créationDesTablesToolStripMenuItem";
-            this.créationDesTablesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.créationDesTablesToolStripMenuItem.Text = "Création des tables";
-            // 
-            // remplirLesTablesToolStripMenuItem
-            // 
-            this.remplirLesTablesToolStripMenuItem.Name = "remplirLesTablesToolStripMenuItem";
-            this.remplirLesTablesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.remplirLesTablesToolStripMenuItem.Text = "Remplir les tables";
             // 
             // salle_de_marché
             // 
