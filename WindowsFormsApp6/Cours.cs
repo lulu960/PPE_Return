@@ -33,5 +33,10 @@ namespace WindowsFormsApp6
 
             Cours_gridview.DataSource = dt1;
         }
+
+        private void Quitbtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

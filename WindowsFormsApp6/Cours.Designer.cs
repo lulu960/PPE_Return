@@ -67,6 +67,7 @@ namespace WindowsFormsApp6
             this.Quitbtn.TabIndex = 2;
             this.Quitbtn.Text = "Quitter";
             this.Quitbtn.UseVisualStyleBackColor = false;
+            this.Quitbtn.Click += new System.EventHandler(this.Quitbtn_Click);
             // 
             // Cours
             // 
