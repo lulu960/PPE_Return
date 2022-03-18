@@ -37,6 +37,7 @@ namespace WindowsFormsApp6
             // 
             // Cours_gridview
             // 
+            this.Cours_gridview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Cours_gridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Cours_gridview.Location = new System.Drawing.Point(12, 12);
             this.Cours_gridview.Name = "Cours_gridview";
