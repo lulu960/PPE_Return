@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.Cryptography;
 using MySql.Data.MySqlClient;
+using Lib;
 
 namespace WindowsFormsApp6
 {
@@ -50,26 +51,21 @@ namespace WindowsFormsApp6
                 try
                 {
                     string source = textBoxMDP.Text;
-                    using (SHA512 sha512Hash = SHA512.Create())
+                    
+                    sqlCommand.CommandText = "SELECT Nom , Mot_de_passe FROM ppe.personnel where Nom ='" + textBoxID.Text + "' && Mot_de_passe = '" + lib.Hash(source) + "';";
+                    lecteur = sqlCommand.ExecuteReader();
+                    if (lecteur.HasRows)
                     {
-                        //From String to byte array
-                        byte[] sourceBytes = Encoding.UTF8.GetBytes(source);
-                        byte[] hashBytes = sha512Hash.ComputeHash(sourceBytes);
-                        string hash = BitConverter.ToString(hashBytes).Replace("-", String.Empty);
-                        sqlCommand.CommandText = "SELECT Nom , Mot_de_passe FROM ppe.personnel where Nom ='" + textBoxID.Text + "' && Mot_de_passe = '" + hash + "';";
-                        lecteur = sqlCommand.ExecuteReader();
-                        if (lecteur.HasRows)
-                        {
-                            MessageBox.Show("Bienvenue " + textBoxID.Text + ".");
-                            this.Close();
-                            lecteur.Close();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Mot de passe ou identifiant incorrect");
-                            lecteur.Close();
-                        }
+                        MessageBox.Show("Bienvenue " + textBoxID.Text + ".");
+                        this.Close();
+                        lecteur.Close();
                     }
+                    else
+                    {
+                        MessageBox.Show("Mot de passe ou identifiant incorrect");
+                        lecteur.Close();
+                    }
+                    
                 }
                 catch
                 {

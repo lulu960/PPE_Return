@@ -40,7 +40,7 @@ namespace WindowsFormsApp6
             // lblNvMDP
             // 
             this.lblNvMDP.AutoSize = true;
-            this.lblNvMDP.Location = new System.Drawing.Point(78, 119);
+            this.lblNvMDP.Location = new System.Drawing.Point(39, 42);
             this.lblNvMDP.Name = "lblNvMDP";
             this.lblNvMDP.Size = new System.Drawing.Size(122, 13);
             this.lblNvMDP.TabIndex = 0;
@@ -49,7 +49,7 @@ namespace WindowsFormsApp6
             // lblConfNvMDP
             // 
             this.lblConfNvMDP.AutoSize = true;
-            this.lblConfNvMDP.Location = new System.Drawing.Point(78, 168);
+            this.lblConfNvMDP.Location = new System.Drawing.Point(39, 86);
             this.lblConfNvMDP.Name = "lblConfNvMDP";
             this.lblConfNvMDP.Size = new System.Drawing.Size(123, 13);
             this.lblConfNvMDP.TabIndex = 1;
@@ -57,7 +57,7 @@ namespace WindowsFormsApp6
             // 
             // textBoxNvMDP1
             // 
-            this.textBoxNvMDP1.Location = new System.Drawing.Point(308, 119);
+            this.textBoxNvMDP1.Location = new System.Drawing.Point(178, 38);
             this.textBoxNvMDP1.Name = "textBoxNvMDP1";
             this.textBoxNvMDP1.Size = new System.Drawing.Size(284, 20);
             this.textBoxNvMDP1.TabIndex = 2;
@@ -65,7 +65,7 @@ namespace WindowsFormsApp6
             // 
             // textBoxNvMDP2
             // 
-            this.textBoxNvMDP2.Location = new System.Drawing.Point(308, 168);
+            this.textBoxNvMDP2.Location = new System.Drawing.Point(178, 82);
             this.textBoxNvMDP2.Name = "textBoxNvMDP2";
             this.textBoxNvMDP2.Size = new System.Drawing.Size(284, 20);
             this.textBoxNvMDP2.TabIndex = 3;
@@ -73,19 +73,19 @@ namespace WindowsFormsApp6
             // 
             // btnEnregistreNvMDP
             // 
-            this.btnEnregistreNvMDP.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.btnEnregistreNvMDP.Location = new System.Drawing.Point(262, 261);
+            this.btnEnregistreNvMDP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnEnregistreNvMDP.Location = new System.Drawing.Point(269, 113);
             this.btnEnregistreNvMDP.Name = "btnEnregistreNvMDP";
-            this.btnEnregistreNvMDP.Size = new System.Drawing.Size(235, 105);
+            this.btnEnregistreNvMDP.Size = new System.Drawing.Size(96, 27);
             this.btnEnregistreNvMDP.TabIndex = 4;
-            this.btnEnregistreNvMDP.Text = "Enregistrer";
+            this.btnEnregistreNvMDP.Text = "Modifier";
             this.btnEnregistreNvMDP.UseVisualStyleBackColor = true;
             this.btnEnregistreNvMDP.Click += new System.EventHandler(this.btnEnregistreNvMDP_Click);
             // 
             // cbxVisibleMDP
             // 
             this.cbxVisibleMDP.AutoSize = true;
-            this.cbxVisibleMDP.Location = new System.Drawing.Point(631, 121);
+            this.cbxVisibleMDP.Location = new System.Drawing.Point(477, 40);
             this.cbxVisibleMDP.Name = "cbxVisibleMDP";
             this.cbxVisibleMDP.Size = new System.Drawing.Size(128, 17);
             this.cbxVisibleMDP.TabIndex = 5;
@@ -97,7 +97,7 @@ namespace WindowsFormsApp6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(630, 152);
             this.Controls.Add(this.cbxVisibleMDP);
             this.Controls.Add(this.btnEnregistreNvMDP);
             this.Controls.Add(this.textBoxNvMDP2);
@@ -105,6 +105,7 @@ namespace WindowsFormsApp6
             this.Controls.Add(this.lblConfNvMDP);
             this.Controls.Add(this.lblNvMDP);
             this.Name = "ChangementMDP";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Changement de mot de passe";
             this.Load += new System.EventHandler(this.ChangementMDP_Load);
             this.ResumeLayout(false);
