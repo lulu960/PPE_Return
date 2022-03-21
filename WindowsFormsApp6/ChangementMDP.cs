@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.Cryptography;
 using MySql.Data.MySqlClient;
+using libe;
 
 namespace WindowsFormsApp6
 {
@@ -29,17 +30,13 @@ namespace WindowsFormsApp6
             if (textBoxNvMDP1.Text == textBoxNvMDP2.Text)
             {
                 string source = textBoxNvMDP1.Text;
-                using (SHA512 sha512Hash = SHA512.Create())
                 {
                     try
                     {
-                        //From String to byte array
-                        byte[] sourceBytes = Encoding.UTF8.GetBytes(source);
-                        byte[] hashBytes = sha512Hash.ComputeHash(sourceBytes);
-                        string hash = BitConverter.ToString(hashBytes).Replace("-", String.Empty);
+                        
                         sqlCommand.CommandText = "Use ppe";
                         sqlCommand.ExecuteNonQuery();
-                        sqlCommand.CommandText = "Update personnel SET Mot_de_passe = ('" + hash + "') where Nom = ('" + IDEnregistree + "')";
+                        sqlCommand.CommandText = "Update personnel SET Mot_de_passe = ('" + Libe.Hash(source) + "') where Nom = ('" + IDEnregistree + "')";
                         sqlCommand.ExecuteNonQuery();
                         MessageBox.Show("Votre mot de passe a bien été enregistré.");
                         this.Close();

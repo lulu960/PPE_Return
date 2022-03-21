@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Security.Cryptography;
 using MySql.Data.MySqlClient;
 using Lib;
+using libe;
 
 namespace WindowsFormsApp6
 {
@@ -51,8 +52,9 @@ namespace WindowsFormsApp6
                 try
                 {
                     string source = textBoxMDP.Text;
-                    
-                    sqlCommand.CommandText = "SELECT Nom , Mot_de_passe FROM ppe.personnel where Nom ='" + textBoxID.Text + "' && Mot_de_passe = '" + lib.Hash(source) + "';";
+
+
+                    sqlCommand.CommandText = "SELECT Nom , Mot_de_passe FROM ppe.personnel where Nom ='" + textBoxID.Text + "' && Mot_de_passe = '" + Libe.Hash(source) + "';";
                     lecteur = sqlCommand.ExecuteReader();
                     if (lecteur.HasRows)
                     {

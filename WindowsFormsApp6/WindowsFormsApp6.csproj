@@ -36,6 +36,9 @@
     <Reference Include="lib">
       <HintPath>..\lib.dll</HintPath>
     </Reference>
+    <Reference Include="libe">
+      <HintPath>..\libe.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data">
       <HintPath>..\..\MySQL Connector Net 6.9.12\Assemblies\v4.5\MySql.Data.dll</HintPath>
     </Reference>

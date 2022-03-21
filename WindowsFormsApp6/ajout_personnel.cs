@@ -53,7 +53,7 @@ namespace WindowsFormsApp6
             try
             {
                 string id_categorie;
-                if(radioButtonRSP.Checked == true)
+                if(radioButtonTRD.Checked == true)
                 {
                     id_categorie = "TRD";
                 }
