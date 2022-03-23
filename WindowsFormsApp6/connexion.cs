@@ -21,7 +21,7 @@ namespace WindowsFormsApp6
         public connexion(MySqlCommand sqlC)
         {
             InitializeComponent();
-            sqlCommand = sqlC;
+            sqlCommand = sqlC;        
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -67,19 +67,24 @@ namespace WindowsFormsApp6
                         MessageBox.Show("Mot de passe ou identifiant incorrect");
                         lecteur.Close();
                     }
-                    
                 }
                 catch
                 {
                     lecteur.Close();
                 }
             }
-            
         }
 
         private void connexion_Load(object sender, EventArgs e)
         {
 
+        }
+        class Compte
+        {
+            private string _nom;
+            private string _role;
+
+            public 
         }
     }
 }
