@@ -247,6 +247,7 @@ namespace WindowsFormsApp6
             this.MaximumSize = new System.Drawing.Size(465, 262);
             this.MinimumSize = new System.Drawing.Size(465, 262);
             this.Name = "ajout_personnel";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Fiche Personnel";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);

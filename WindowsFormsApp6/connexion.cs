@@ -52,15 +52,19 @@ namespace WindowsFormsApp6
                 try
                 {
                     string source = textBoxMDP.Text;
+                    int ID_perso = -1;
+                    string role = null;
 
-
-                    sqlCommand.CommandText = "SELECT Nom , Mot_de_passe FROM ppe.personnel where Nom ='" + textBoxID.Text + "' && Mot_de_passe = '" + Libe.Hash(source) + "';";
+                    sqlCommand.CommandText = "select * from personnel natural join attribuer where personnel.ID_personnel = " + ID_perso + ";";
                     lecteur = sqlCommand.ExecuteReader();
                     if (lecteur.HasRows)
                     {
-                        MessageBox.Show("Bienvenue " + textBoxID.Text + ".");
-                        this.Close();
-                        lecteur.Close();
+                        while (lecteur.Read())
+                        {
+                            /* recupération du role de l'utilisateur*/
+                            role = lecteur.GetString(4);
+                        }
+                        MessageBox.Show("Bienvenue " + textBoxID.Text + " et l'ID est" + ID_perso + "et votre role est " + role + ".");
                     }
                     else
                     {
@@ -79,12 +83,23 @@ namespace WindowsFormsApp6
         {
 
         }
-        class Compte
-        {
-            private string _nom;
-            private string _role;
+    }
+    class Compte
+    {
+        private int _id_perso;
+        private string _role;
+        private string _nom;
 
-            public 
+        public int ID_Perso
+        {
+            get => _id_perso;
+            set => _id_perso = value;
         }
+        public string Role
+        {
+            get => _role;
+            set => _role = value;
+        }
+
     }
 }
