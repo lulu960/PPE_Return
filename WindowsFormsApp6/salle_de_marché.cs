@@ -16,11 +16,8 @@ namespace WindowsFormsApp6
     {
 
         MySqlCommand sqlCommand;
-        public salle_de_marché(MySqlCommand sqlC, string Nom, string mdp)
+        public salle_de_marché()
         {
-            string Nomv1 = Nom;
-            string mdpv1 = mdp;
-            sqlCommand = sqlC;
             InitializeComponent();
 
             string[] cripty(int[] pawd, int[] id)
@@ -78,7 +75,7 @@ namespace WindowsFormsApp6
                 MySqlConnection cnn = new MySqlConnection(connetionString);
                 cnn.Open();
                 label1.BackColor = Color.Green;
-                lblCompte.Text = Nomv1;
+                
                 sqlCommand = cnn.CreateCommand();
                 
             }
@@ -91,7 +88,7 @@ namespace WindowsFormsApp6
 
         private void personnelToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            connexion connexion = new connexion();
+            connexion connexion = new connexion(sqlCommand);
             connexion.ShowDialog();
             connexion.Dispose();
         }

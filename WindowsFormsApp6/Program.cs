@@ -18,10 +18,7 @@ namespace WindowsFormsApp6
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            connexion connexion = new connexion();
-            connexion.ShowDialog();
-            connexion.Dispose();
-
+            Application.Run(new salle_de_marché());
         }
     }
 }
