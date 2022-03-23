@@ -49,32 +49,47 @@ namespace WindowsFormsApp6
             }
             else
             {
-                lecteur.Close();
+               lecteur.Close();
                 try
                 {
                     int ID_perso = 0;
+                    string role = null;
                     string source = textBoxMDP.Text;
                     string mdp = Libe.Hash(source);
                         sqlCommand.CommandText = "SELECT Nom , Mot_de_passe, ID_personnel FROM ppe.personnel where Nom ='" + textBoxID.Text + "' && Mot_de_passe = '" + mdp + "';";
                         lecteur = sqlCommand.ExecuteReader();
-                        if (lecteur.HasRows)
+                    if (lecteur.HasRows)
+                    {
+                        while (lecteur.Read())
+                        {
+                            /*recupération de l'id utilisateur*/
+                            ID_perso = lecteur.GetInt32(2);
+                        }
+                        lecteur.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Mot de passe ou identifiant incorrect");
+                        lecteur.Close();
+                    }
+
+                    sqlCommand.CommandText = "select * from personnel natural join attribuer where personnel.ID_personnel = "+ ID_perso +";";
+                        lecteur = sqlCommand.ExecuteReader();
+                     if (lecteur.HasRows)
                         {
                             while (lecteur.Read())
-                                {
-                                    /*recupération de l'id utilisateur*/
-                                       ID_perso = lecteur.GetInt32(2);
-                                }
-                        lecteur.Close();
-                        MessageBox.Show("Bienvenue " + textBoxID.Text +" et l'ID est" + ID_perso + ".");                            
+                            {
+                                /*recupération de l'id utilisateur*/
+                                role = lecteur.GetString(4);
+                            }
+                        MessageBox.Show("Bienvenue " + textBoxID.Text +" et l'ID est" + ID_perso + "et votre role est "+ role +".");                            
                         this.Close();
-                        
-                        }
-                        else
-                        {
-                            MessageBox.Show("Mot de passe ou identifiant incorrect");
-                            lecteur.Close();
-                        }
-                    
+                        lecteur.Close();
+                        }              
+                     else
+                    {
+                        lecteur.Close();
+                    }
                 }
                 catch
                 {
