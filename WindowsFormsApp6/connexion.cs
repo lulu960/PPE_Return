@@ -37,7 +37,7 @@ namespace WindowsFormsApp6
         private void button1_Click(object sender, EventArgs e)
         {
             MySqlDataReader lecteur;
-            sqlCommand.CommandText = "SELECT Nom , Mot_de_passe FROM ppe.personnel where Nom ='"+textBoxID.Text+"' AND Mot_de_passe = '"+textBoxMDP.Text+"';";
+            sqlCommand.CommandText = "SELECT Nom , Mot_de_passe FROM ppe.personnel where Binary Nom ='" + textBoxID.Text + "' AND Binary Mot_de_passe = '" + textBoxMDP.Text + "';";
             lecteur = sqlCommand.ExecuteReader();
             if (lecteur.HasRows)
             {
@@ -51,9 +51,29 @@ namespace WindowsFormsApp6
                 lecteur.Close();
                 try
                 {
-                    string source = textBoxMDP.Text;
                     int ID_perso = -1;
                     string role = null;
+                    string source = textBoxMDP.Text;
+                    string mdp = Libe.Hash(source);
+                    Compte compte = new Compte();
+                    sqlCommand.CommandText = "SELECT Nom , Mot_de_passe, ID_personnel FROM ppe.personnel where Nom ='" + textBoxID.Text + "' && Mot_de_passe = '" + mdp + "';";
+                    lecteur = sqlCommand.ExecuteReader();
+                    if (lecteur.HasRows)
+                    {
+                        compte.Nom = textBoxID.Text;
+                        while (lecteur.Read())
+                        {
+                            /*recupération de l'id utilisateur*/
+                            ID_perso = lecteur.GetInt32(2);
+                        }
+                        compte.ID_Perso = ID_perso;
+                        lecteur.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Mot de passe ou identifiant incorrect");
+                        lecteur.Close();
+                    }
 
                     sqlCommand.CommandText = "select * from personnel natural join attribuer where personnel.ID_personnel = " + ID_perso + ";";
                     lecteur = sqlCommand.ExecuteReader();
@@ -61,14 +81,16 @@ namespace WindowsFormsApp6
                     {
                         while (lecteur.Read())
                         {
-                            /* recupération du role de l'utilisateur*/
+                            /*recupération du role de l'utilisateur*/
                             role = lecteur.GetString(4);
                         }
-                        MessageBox.Show("Bienvenue " + textBoxID.Text + " et l'ID est" + ID_perso + "et votre role est " + role + ".");
+                        compte.Role = role;
+                        MessageBox.Show(compte.Nom + "  " + compte.ID_Perso + " " + compte.Role);
+                        this.Close();
+                        lecteur.Close();
                     }
                     else
                     {
-                        MessageBox.Show("Mot de passe ou identifiant incorrect");
                         lecteur.Close();
                     }
                 }
@@ -99,6 +121,11 @@ namespace WindowsFormsApp6
         {
             get => _role;
             set => _role = value;
+        }
+        public string Nom
+        {
+            get => _nom;
+            set => _nom = value;
         }
 
     }
