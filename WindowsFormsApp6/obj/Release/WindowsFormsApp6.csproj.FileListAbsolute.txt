@@ -1,0 +1,11 @@
+C:\Users\nicol\source\repos\PPE_Return\WindowsFormsApp6\obj\Release\WindowsFormsApp6.csproj.AssemblyReference.cache
+C:\Users\nicol\source\repos\PPE_Return\WindowsFormsApp6\obj\Release\WindowsFormsApp6.budgets.resources
+C:\Users\nicol\source\repos\PPE_Return\WindowsFormsApp6\obj\Release\WindowsFormsApp6.ChangementMDP.resources
+C:\Users\nicol\source\repos\PPE_Return\WindowsFormsApp6\obj\Release\WindowsFormsApp6.Fiche_personnel.resources
+C:\Users\nicol\source\repos\PPE_Return\WindowsFormsApp6\obj\Release\WindowsFormsApp6.salle_de_marché.resources
+C:\Users\nicol\source\repos\PPE_Return\WindowsFormsApp6\obj\Release\WindowsFormsApp6.ajout_personnel.resources
+C:\Users\nicol\source\repos\PPE_Return\WindowsFormsApp6\obj\Release\WindowsFormsApp6.connexion.resources
+C:\Users\nicol\source\repos\PPE_Return\WindowsFormsApp6\obj\Release\WindowsFormsApp6.Form4.resources
+C:\Users\nicol\source\repos\PPE_Return\WindowsFormsApp6\obj\Release\WindowsFormsApp6.Properties.Resources.resources
+C:\Users\nicol\source\repos\PPE_Return\WindowsFormsApp6\obj\Release\WindowsFormsApp6.csproj.GenerateResource.cache
+C:\Users\nicol\source\repos\PPE_Return\WindowsFormsApp6\obj\Release\WindowsFormsApp6.csproj.CoreCompileInputs.cache

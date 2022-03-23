@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 using libe;
 
 namespace WindowsFormsApp6
@@ -17,7 +18,10 @@ namespace WindowsFormsApp6
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new salle_de_marché());
+            connexion connexion = new connexion();
+            connexion.ShowDialog();
+            connexion.Dispose();
+
         }
     }
 }
