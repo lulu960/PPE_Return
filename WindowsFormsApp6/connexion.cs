@@ -36,6 +36,7 @@ namespace WindowsFormsApp6
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
             MySqlDataReader lecteur;
             sqlCommand.CommandText = "SELECT Nom , Mot_de_passe FROM ppe.personnel where Binary Nom ='" + textBoxID.Text+ "' AND Binary Mot_de_passe = '" + textBoxMDP.Text+"';";
             lecteur = sqlCommand.ExecuteReader();
@@ -51,16 +52,19 @@ namespace WindowsFormsApp6
                 lecteur.Close();
                 try
                 {
-                    
+                    int ID_perso = 0;
                     string source = textBoxMDP.Text;
-
                     string mdp = Libe.Hash(source);
-                        sqlCommand.CommandText = "SELECT Nom , Mot_de_passe FROM ppe.personnel where Nom ='" + textBoxID.Text + "' && Mot_de_passe = '" + mdp + "';";
+                        sqlCommand.CommandText = "SELECT Nom , Mot_de_passe, ID_personnel FROM ppe.personnel where Nom ='" + textBoxID.Text + "' && Mot_de_passe = '" + mdp + "';";
                         lecteur = sqlCommand.ExecuteReader();
                         if (lecteur.HasRows)
                         {
-                            MessageBox.Show("Bienvenue " + textBoxID.Text + ".");
-                            
+                            while (lecteur.Read())
+                                {
+                                    /*recupération de l'id utilisateur*/
+                                       ID_perso = lecteur.GetInt32(2);
+                                }
+                            MessageBox.Show("Bienvenue " + textBoxID.Text +" et l'ID est" + ID_perso + ".");                            
                             this.Close();
                             lecteur.Close();
                         }
