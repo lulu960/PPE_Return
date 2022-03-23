@@ -64,9 +64,10 @@ namespace WindowsFormsApp6
                                     /*recupération de l'id utilisateur*/
                                        ID_perso = lecteur.GetInt32(2);
                                 }
-                            MessageBox.Show("Bienvenue " + textBoxID.Text +" et l'ID est" + ID_perso + ".");                            
-                            this.Close();
-                            lecteur.Close();
+                        lecteur.Close();
+                        MessageBox.Show("Bienvenue " + textBoxID.Text +" et l'ID est" + ID_perso + ".");                            
+                        this.Close();
+                        
                         }
                         else
                         {
