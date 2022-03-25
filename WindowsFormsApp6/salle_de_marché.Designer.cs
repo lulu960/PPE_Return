@@ -47,7 +47,7 @@ namespace WindowsFormsApp6
             this.administrationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.créationDesTablesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.remplirLesTablesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblEtatBd = new System.Windows.Forms.Label();
             this.lblCompte = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -197,19 +197,19 @@ namespace WindowsFormsApp6
             this.remplirLesTablesToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.remplirLesTablesToolStripMenuItem.Text = "Remplir les tables";
             // 
-            // label1
+            // lblEtatBd
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Red;
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(11, 267);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Etat_bd";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.lblEtatBd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblEtatBd.AutoSize = true;
+            this.lblEtatBd.BackColor = System.Drawing.Color.Red;
+            this.lblEtatBd.ForeColor = System.Drawing.Color.Black;
+            this.lblEtatBd.Location = new System.Drawing.Point(11, 267);
+            this.lblEtatBd.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEtatBd.Name = "lblEtatBd";
+            this.lblEtatBd.Size = new System.Drawing.Size(44, 13);
+            this.lblEtatBd.TabIndex = 1;
+            this.lblEtatBd.Text = "Etat_bd";
+            this.lblEtatBd.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblCompte
             // 
@@ -227,7 +227,7 @@ namespace WindowsFormsApp6
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(556, 289);
             this.Controls.Add(this.lblCompte);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblEtatBd);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -259,7 +259,7 @@ namespace WindowsFormsApp6
         private System.Windows.Forms.ToolStripMenuItem aProposToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem administrationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem testFicherPersoToolStripMenuItem;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblEtatBd;
         private System.Windows.Forms.ToolStripMenuItem coursToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem créationDesTablesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem remplirLesTablesToolStripMenuItem;

@@ -18,7 +18,7 @@ namespace WindowsFormsApp6
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new salle_de_marché());
+            Application.Run(new connexion());
         }
     }
 }
