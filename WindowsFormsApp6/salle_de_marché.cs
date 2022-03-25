@@ -82,6 +82,11 @@ namespace WindowsFormsApp6
                 MessageBox.Show(exc.Message, "Erreur de connexion");
             }
             Compte compte = new Compte();
+            compte.Nom = compte.Nom;
+          
+          
+            lblCompte.Text = compte.Nom + "  " + compte.Role;
+          
         }
 
         private void personnelToolStripMenuItem_Click(object sender, EventArgs e)

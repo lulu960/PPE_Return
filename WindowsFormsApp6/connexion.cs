@@ -106,27 +106,4 @@ namespace WindowsFormsApp6
 
         }
     }
-    class Compte
-    {
-        private int _id_perso;
-        private string _role;
-        private string _nom;
-
-        public int ID_Perso
-        {
-            get => _id_perso;
-            set => _id_perso = value;
-        }
-        public string Role
-        {
-            get => _role;
-            set => _role = value;
-        }
-        public string Nom
-        {
-            get => _nom;
-            set => _nom = value;
-        }
-
-    }
 }

@@ -67,6 +67,7 @@
     <Compile Include="ChangementMDP.Designer.cs">
       <DependentUpon>ChangementMDP.cs</DependentUpon>
     </Compile>
+    <Compile Include="Compte.cs" />
     <Compile Include="Fiche_personnel.cs">
       <SubType>Form</SubType>
     </Compile>
