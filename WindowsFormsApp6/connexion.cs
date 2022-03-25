@@ -52,7 +52,7 @@ namespace WindowsFormsApp6
                lecteur.Close();
                 try
                 {
-                    int ID_perso = 0;
+                    int ID_perso = -1;
                     string role = null;
                     string source = textBoxMDP.Text;
                     string mdp = Libe.Hash(source);
@@ -79,7 +79,7 @@ namespace WindowsFormsApp6
                         {
                             while (lecteur.Read())
                             {
-                                /*recupération de l'id utilisateur*/
+                                /*recupération du role de l'utilisateur*/
                                 role = lecteur.GetString(4);
                             }
                         MessageBox.Show("Bienvenue " + textBoxID.Text +" et l'ID est" + ID_perso + "et votre role est "+ role +".");                            
