@@ -36,12 +36,13 @@ namespace WindowsFormsApp6
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            /*On verifie si le mdp et le nom de compte est égal ou non si oui on le modifie*/
             MySqlDataReader lecteur;
             sqlCommand.CommandText = "SELECT Nom , Mot_de_passe FROM ppe.personnel where Binary Nom ='" + textBoxID.Text+ "' AND Binary Mot_de_passe = '" + textBoxMDP.Text+"';";
             lecteur = sqlCommand.ExecuteReader();
             if (lecteur.HasRows)
             {
+                /*Si le mdp est égal au nom du compte alors on ouvre une page pour le changer*/
                 ChangementMDP ChangementMDP = new ChangementMDP(textBoxID.Text, sqlCommand);
                 lecteur.Close();
                 ChangementMDP.ShowDialog();
