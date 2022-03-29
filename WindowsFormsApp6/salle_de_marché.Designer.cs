@@ -152,8 +152,9 @@ namespace WindowsFormsApp6
             // coursToolStripMenuItem
             // 
             this.coursToolStripMenuItem.Name = "coursToolStripMenuItem";
-            this.coursToolStripMenuItem.Size = new System.Drawing.Size(129, 26);
+            this.coursToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.coursToolStripMenuItem.Text = "Cours";
+            this.coursToolStripMenuItem.Click += new System.EventHandler(this.coursToolStripMenuItem_Click);
             // 
             // opérationsToolStripMenuItem
             // 

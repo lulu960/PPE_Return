@@ -70,6 +70,12 @@
     <Compile Include="ChangementMDP.Designer.cs">
       <DependentUpon>ChangementMDP.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cours.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cours.Designer.cs">
+      <DependentUpon>Cours.cs</DependentUpon>
+    </Compile>
     <Compile Include="Fiche_personnel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChangementMDP.resx">
       <DependentUpon>ChangementMDP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cours.resx">
+      <DependentUpon>Cours.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Fiche_personnel.resx">
       <DependentUpon>Fiche_personnel.cs</DependentUpon>

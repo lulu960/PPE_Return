@@ -72,3 +72,8 @@ C:\Users\polog\source\repos\PPE_Return\WindowsFormsApp6\obj\Debug\WindowsFormsAp
 C:\Users\polog\source\repos\PPE_Return\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.csproj.CopyComplete
 C:\Users\polog\source\repos\PPE_Return\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.exe
 C:\Users\polog\source\repos\PPE_Return\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.pdb
+C:\Users\lucas\source\repos\PPE_Return\WindowsFormsApp6\bin\Debug\Lib.dll
+C:\Users\lucas\source\repos\PPE_Return\WindowsFormsApp6\bin\Debug\libe.dll
+C:\Users\lucas\source\repos\PPE_Return\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.ChangementMDP.resources
+C:\Users\lucas\source\repos\PPE_Return\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.Opérations.resources
+C:\Users\lucas\source\repos\PPE_Return\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.Cours.resources

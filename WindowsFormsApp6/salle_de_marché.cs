@@ -165,5 +165,12 @@ namespace WindowsFormsApp6
         private void label2_Click(object sender, EventArgs e)
         {
         }
+
+        private void coursToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Cours cours = new Cours(sqlCommand);
+            cours.ShowDialog();
+            cours.Dispose();
+        }
     }
 }
