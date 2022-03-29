@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.Cryptography;
 using MySql.Data.MySqlClient;
+using Lib;
 using libe;
 
 namespace WindowsFormsApp6
@@ -20,7 +21,7 @@ namespace WindowsFormsApp6
         public connexion(MySqlCommand sqlC)
         {
             InitializeComponent();
-            sqlCommand = sqlC;
+            sqlCommand = sqlC;        
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -32,16 +33,14 @@ namespace WindowsFormsApp6
         {
 
         }
-
+        int ID_user = -1;
         private void button1_Click(object sender, EventArgs e)
         {
-            /*On verifie si le mdp et le nom de compte est égal ou non si oui on le modifie*/
             MySqlDataReader lecteur;
-            sqlCommand.CommandText = "SELECT Nom , Mot_de_passe FROM ppe.personnel where Binary Nom ='" + textBoxID.Text+ "' AND Binary Mot_de_passe = '" + textBoxMDP.Text+"';";
+            sqlCommand.CommandText = "SELECT Nom , Mot_de_passe FROM ppe.personnel where Binary Nom ='" + textBoxID.Text + "' AND Binary Mot_de_passe = '" + textBoxMDP.Text + "';";
             lecteur = sqlCommand.ExecuteReader();
             if (lecteur.HasRows)
             {
-                /*Si le mdp est égal au nom du compte alors on ouvre une page pour le changer*/
                 ChangementMDP ChangementMDP = new ChangementMDP(textBoxID.Text, sqlCommand);
                 lecteur.Close();
                 ChangementMDP.ShowDialog();
@@ -49,22 +48,25 @@ namespace WindowsFormsApp6
             }
             else
             {
-               lecteur.Close();
+                lecteur.Close();
                 try
                 {
                     int ID_perso = -1;
                     string role = null;
                     string source = textBoxMDP.Text;
                     string mdp = Libe.Hash(source);
-                        sqlCommand.CommandText = "SELECT Nom , Mot_de_passe, ID_personnel FROM ppe.personnel where Nom ='" + textBoxID.Text + "' && Mot_de_passe = '" + mdp + "';";
-                        lecteur = sqlCommand.ExecuteReader();
+                    Compte compte = new Compte();
+                    sqlCommand.CommandText = "SELECT Nom , Mot_de_passe, ID_personnel FROM ppe.personnel where Nom ='" + textBoxID.Text + "' && Mot_de_passe = '" + mdp + "';";
+                    lecteur = sqlCommand.ExecuteReader();
                     if (lecteur.HasRows)
                     {
+                        compte.Nom = textBoxID.Text;
                         while (lecteur.Read())
                         {
                             /*recupération de l'id utilisateur*/
                             ID_perso = lecteur.GetInt32(2);
                         }
+                        ID_user = ID_perso;
                         lecteur.Close();
                     }
                     else
@@ -73,20 +75,21 @@ namespace WindowsFormsApp6
                         lecteur.Close();
                     }
 
-                    sqlCommand.CommandText = "select * from personnel natural join attribuer where personnel.ID_personnel = "+ ID_perso +";";
-                        lecteur = sqlCommand.ExecuteReader();
-                     if (lecteur.HasRows)
+                    sqlCommand.CommandText = "select * from personnel natural join attribuer where personnel.ID_personnel = " + ID_perso + ";";
+                    lecteur = sqlCommand.ExecuteReader();
+                    if (lecteur.HasRows)
+                    {
+                        while (lecteur.Read())
                         {
-                            while (lecteur.Read())
-                            {
-                                /*recupération du role de l'utilisateur*/
-                                role = lecteur.GetString(4);
-                            }
-                        MessageBox.Show("Bienvenue " + textBoxID.Text +" et l'ID est" + ID_perso + "et votre role est "+ role +".");
+                            /*recupération du role de l'utilisateur*/
+                            role = lecteur.GetString(4);
+                        }
+                        compte.Role = role;
+                        MessageBox.Show(compte.Nom + "  " + ID_user + " " + compte.Role);
                         this.Close();
                         lecteur.Close();
-                        }              
-                     else
+                    }
+                    else
                     {
                         lecteur.Close();
                     }
@@ -97,6 +100,12 @@ namespace WindowsFormsApp6
                 }
             }
             
+        }
+        
+
+        public int getID()
+        {
+            return ID_user;
         }
 
         private void connexion_Load(object sender, EventArgs e)

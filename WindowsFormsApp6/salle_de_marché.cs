@@ -8,14 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-using Lib;
+using libe;
 
 namespace WindowsFormsApp6
 {
     public partial class salle_de_marché : Form
     {
         MySqlCommand sqlCommand;
-        internal static string roleform;
         public salle_de_marché()
         {
 
@@ -82,14 +81,30 @@ namespace WindowsFormsApp6
             {
                 MessageBox.Show(exc.Message, "Erreur de connexion");
             }
-
+            Compte compte = new Compte();
+            compte.Nom = compte.Nom;
+          
+          
+            lblCompte.Text = compte.Nom + "  " + compte.Role;
+          
         }
 
         private void personnelToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            connexion form3 = new connexion(sqlCommand);
-            form3.ShowDialog();
-            form3.Dispose();
+            connexion connexion = new connexion(sqlCommand);
+            connexion.ShowDialog();
+            int ID_User = connexion.getID();
+            if(ID_User > 0)
+            {
+                lblCompte.Text = ID_User.ToString();
+                lblCompte.BackColor = Color.Aqua;
+            }
+            else
+            {
+                lblCompte.Text = "Connectez vous";
+                lblCompte.BackColor = Color.Red;
+            }
+            connexion.Dispose();
         }
 
         private void testToolStripMenuItem_Click(object sender, EventArgs e)
@@ -116,7 +131,20 @@ namespace WindowsFormsApp6
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            connexion connexion = new connexion(sqlCommand);
+            connexion.ShowDialog();
+            int ID_User = connexion.getID();
+            if (ID_User > 0)
+            {
+                lblCompte.Text = ID_User.ToString();
+                lblCompte.BackColor = Color.Aqua;
+            }
+            else
+            {
+                lblCompte.Text = "Connectez vous";
+                lblCompte.BackColor = Color.Red;
+            }
+            connexion.Dispose();
         }
 
         private void visualiserLePersonnelToolStripMenuItem_Click(object sender, EventArgs e)
@@ -150,27 +178,9 @@ namespace WindowsFormsApp6
 
         }
 
-        private void opérationsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Opérations operation = new Opérations(sqlCommand);
-            operation.ShowDialog();
-            operation.Dispose();
-        }
-
-        private void créationDesTablesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void lblCompte_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void coursToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Cours cours = new Cours(sqlCommand);
-            cours.ShowDialog();
-            cours.Dispose();
         }
     }
 }
