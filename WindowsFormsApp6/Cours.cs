@@ -33,7 +33,10 @@ namespace WindowsFormsApp6
 
         private void Refreshbtn_Click(object sender, EventArgs e)
         {
-           
+            MySqlDataAdapter sqlDa = new MySqlDataAdapter("Select * from libelles", sqlCommand.Connection);
+            DataTable dt1 = new DataTable();
+            sqlDa.Fill(dt1);
+            Cours_gridview.DataSource = dt1;
         }
 
         private void Cours_gridview_CellContentClick(object sender, DataGridViewCellEventArgs e)

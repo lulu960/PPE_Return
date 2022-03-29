@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using System.Diagnostics;
+using System.Threading;
 
 namespace Variation
 {
@@ -52,7 +54,8 @@ namespace Variation
 
 
             }
-
+            Random randy = new Random();
+            int nbr = 0;
             int[] know = { 233, 48, 186 };
             int[] word = { 469, 69, 694, 869, 969, 1114, 1125, 1114, 1114 };
             string[] list = cripty(know, word);
@@ -67,12 +70,24 @@ namespace Variation
                 MySqlConnection cnn = new MySqlConnection(connetionString);
                 cnn.Open();
                 sqlCommand = cnn.CreateCommand();
+                while(true)
+                {
+                    Thread.Sleep(60000);
+                        Console.WriteLine("cours a jour");
+                    sqlCommand.CommandText = "UPDATE libelles SET Cours = Cours + RAND() * (-0.05 - 0.05) + 0.05 ORDER BY RAND() LIMIT 442";
+                    sqlCommand.ExecuteNonQuery();
+                    sqlCommand.CommandText = "UPDATE libelles SET Cours = 0.001 WHERE Cours< 0 ORDER BY RAND() LIMIT 442 ";
+                    sqlCommand.ExecuteNonQuery();
+                }
             }
             catch (Exception exc)
             {
                 Console.WriteLine(exc.Message, "Erreur de connexion");
             }
+           
 
         }
+    
     }
+
 }
