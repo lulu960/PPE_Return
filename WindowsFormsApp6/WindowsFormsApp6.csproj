@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -22,6 +23,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,8 +33,15 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Lib">
+      <HintPath>..\lib\Lib.dll</HintPath>
+    </Reference>
+    <Reference Include="libe">
+      <HintPath>..\lib\libe.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data">
       <HintPath>..\..\MySQL Connector Net 6.9.12\Assemblies\v4.5\MySql.Data.dll</HintPath>
     </Reference>
@@ -55,17 +64,23 @@
     <Compile Include="budgets.Designer.cs">
       <DependentUpon>budgets.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cours.cs">
+    <Compile Include="ChangementMDP.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cours.Designer.cs">
-      <DependentUpon>Cours.cs</DependentUpon>
+    <Compile Include="ChangementMDP.Designer.cs">
+      <DependentUpon>ChangementMDP.cs</DependentUpon>
     </Compile>
     <Compile Include="Fiche_personnel.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Fiche_personnel.Designer.cs">
       <DependentUpon>Fiche_personnel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Opérations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Opérations.Designer.cs">
+      <DependentUpon>Opérations.cs</DependentUpon>
     </Compile>
     <Compile Include="salle_de_marché.cs">
       <SubType>Form</SubType>
@@ -96,11 +111,14 @@
     <EmbeddedResource Include="budgets.resx">
       <DependentUpon>budgets.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cours.resx">
-      <DependentUpon>Cours.cs</DependentUpon>
+    <EmbeddedResource Include="ChangementMDP.resx">
+      <DependentUpon>ChangementMDP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Fiche_personnel.resx">
       <DependentUpon>Fiche_personnel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Opérations.resx">
+      <DependentUpon>Opérations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="salle_de_marché.resx">
       <DependentUpon>salle_de_marché.cs</DependentUpon>
@@ -122,6 +140,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

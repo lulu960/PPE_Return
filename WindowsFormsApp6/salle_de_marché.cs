@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using Lib;
 
 namespace WindowsFormsApp6
 {
     public partial class salle_de_marché : Form
     {
         MySqlCommand sqlCommand;
+        internal static string roleform;
         public salle_de_marché()
         {
 
@@ -85,7 +87,7 @@ namespace WindowsFormsApp6
 
         private void personnelToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            connexion form3 = new connexion();
+            connexion form3 = new connexion(sqlCommand);
             form3.ShowDialog();
             form3.Dispose();
         }
@@ -148,11 +150,20 @@ namespace WindowsFormsApp6
 
         }
 
-        private void coursToolStripMenuItem_Click(object sender, EventArgs e)
+        private void opérationsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Cours Cours = new Cours(sqlCommand);
-            Cours.ShowDialog();
-            Cours.Dispose();
+            Opérations operation = new Opérations(sqlCommand);
+            operation.ShowDialog();
+            operation.Dispose();
+        }
+
+        private void créationDesTablesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
         }
     }
 }

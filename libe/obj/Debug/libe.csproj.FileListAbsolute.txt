@@ -1,0 +1,6 @@
+C:\Users\lucas\source\repos\libe\libe\bin\Debug\libe.dll
+C:\Users\lucas\source\repos\libe\libe\bin\Debug\libe.pdb
+C:\Users\lucas\source\repos\libe\libe\obj\Debug\libe.csproj.AssemblyReference.cache
+C:\Users\lucas\source\repos\libe\libe\obj\Debug\libe.csproj.CoreCompileInputs.cache
+C:\Users\lucas\source\repos\libe\libe\obj\Debug\libe.dll
+C:\Users\lucas\source\repos\libe\libe\obj\Debug\libe.pdb

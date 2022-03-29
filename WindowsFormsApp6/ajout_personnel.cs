@@ -48,14 +48,16 @@ namespace WindowsFormsApp6
 
         private void button1_Click(object sender, EventArgs e)
         {
+            /*début de la transaction*/
             sqlCommand.CommandText = "start transaction";
             sqlCommand.ExecuteNonQuery();
             try
             {
+                /*choix radius du role*/
                 string id_categorie;
                 if(radioButtonRSP.Checked == true)
                 {
-                    id_categorie = "TRD";
+                    id_categorie = "RES";
                 }
                 else if (radioButtonADM.Checked == true)
                 {
@@ -63,12 +65,14 @@ namespace WindowsFormsApp6
                 }
                 else
                 {
-                    id_categorie = "RES";
+                    id_categorie = "TRD";
                 }
                 int ID = -1;
+                /*création du compte dans la bdd avec mdp = nom*/
                 sqlCommand.CommandText = "INSERT INTO personnel (Nom, Prenom, mot_de_passe) VALUES ('" + textBoxNom.Text + "', '" + textBoxPrenom.Text + "', '" + textBoxNom.Text + "')";
                 sqlCommand.ExecuteNonQuery();
                 MySqlDataReader lecteur;
+                /*on récupère l'id du compte créer pour le réutiliser pour attribuer le role*/
                 sqlCommand.CommandText = "SELECT Last_Insert_ID()";
                 lecteur = sqlCommand.ExecuteReader();
                 if (lecteur.HasRows)
@@ -82,22 +86,33 @@ namespace WindowsFormsApp6
                 lecteur.Close();
                 if (checkBoxNoDate.Checked == false)
                 {
+                    /*Date de début et date de fin du compte*/
                     sqlCommand.CommandText = "INSERT INTO attribuer (ID_categorie, ID_personnel, date_debut, date_fin) VALUES ('" +id_categorie+"',"+ID+",'"+ dateTimeDebut.Value.ToString("u").Substring(0, 19) + "', '" + dateTimeFin.Value.ToString("u").Substring(0, 19) + "')";
                     sqlCommand.ExecuteNonQuery();
 
                 }
                 else
                 {
+                    /*Date de début et PAS de date de fin du compte*/
                     sqlCommand.CommandText = "INSERT INTO attribuer (ID_categorie, ID_personnel, date_debut) VALUES ('" + id_categorie + "'," + ID + ",'" + dateTimeDebut.Value.ToString("u").Substring(0, 19) + "')";
                     sqlCommand.ExecuteNonQuery();
                 }
+                if (radioButtonADM.Checked == false)
+                {
+                    /*si création d'un trader alors initialisation du budget pour tarder*/
+                    sqlCommand.CommandText = "insert into budget (Budget, Date, ID_personnel) value ('1000','"+ dateTimeDebut.Value.ToString("u").Substring(0, 19) +"', "+ ID + ")";
+                    sqlCommand.ExecuteNonQuery();
+                }
+                /*si tout ce passe bien on commit les commande sql et le compte se créé*/
                 sqlCommand.CommandText = "commit";
                 sqlCommand.ExecuteNonQuery();
                 MessageBox.Show("L'utilisateur a été créer");
+                this.Close();
             }
 
             catch (Exception ex)
             {
+                /*Pb dans la création du compte donc erreur*/
                 sqlCommand.CommandText = "rollback";
                 sqlCommand.ExecuteNonQuery();
                 MessageBox.Show(ex.Message);
