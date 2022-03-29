@@ -36,11 +36,9 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Lib">
-      <HintPath>..\lib\Lib.dll</HintPath>
-    </Reference>
-    <Reference Include="libe">
-      <HintPath>..\lib\libe.dll</HintPath>
+    <Reference Include="libe, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libe.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data">
       <HintPath>..\..\MySQL Connector Net 6.9.12\Assemblies\v4.5\MySql.Data.dll</HintPath>

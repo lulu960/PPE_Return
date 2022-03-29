@@ -77,3 +77,7 @@ C:\Users\lucas\source\repos\PPE_Return\WindowsFormsApp6\bin\Debug\libe.dll
 C:\Users\lucas\source\repos\PPE_Return\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.ChangementMDP.resources
 C:\Users\lucas\source\repos\PPE_Return\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.Opérations.resources
 C:\Users\lucas\source\repos\PPE_Return\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.Cours.resources
+C:\Users\nicol\source\repos\PPE_Return\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.ChangementMDP.resources
+C:\Users\nicol\source\repos\PPE_Return\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.Cours.resources
+C:\Users\nicol\source\repos\PPE_Return\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.Opérations.resources
+C:\Users\nicol\source\repos\PPE_Return\WindowsFormsApp6\bin\Debug\libe.dll

@@ -8,13 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-using libe;
 
 namespace WindowsFormsApp6
 {
     public partial class salle_de_marché : Form
     {
         MySqlCommand sqlCommand;
+        internal static string roleform;
         public salle_de_marché()
         {
 
@@ -81,11 +81,7 @@ namespace WindowsFormsApp6
             {
                 MessageBox.Show(exc.Message, "Erreur de connexion");
             }
-            Compte compte = new Compte();
-            compte.Nom = compte.Nom;
-          
-          
-            lblCompte.Text = compte.Nom + "  " + compte.Role;
+            
           
         }
 
@@ -178,9 +174,39 @@ namespace WindowsFormsApp6
 
         }
 
+        private void opérationsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Opérations operation = new Opérations(sqlCommand);
+            operation.ShowDialog();
+            operation.Dispose();
+        }
+
+        private void créationDesTablesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void coursToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Cours cours = new Cours(sqlCommand);
+            cours.ShowDialog();
+            cours.Dispose();
+        }
+
         private void lblCompte_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void coursToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Cours cours = new Cours(sqlCommand);
+            cours.ShowDialog();
+            cours.Dispose();
         }
     }
 }

@@ -48,14 +48,13 @@ namespace WindowsFormsApp6
 
         private void button1_Click(object sender, EventArgs e)
         {
-            /*début de la transaction*/
             sqlCommand.CommandText = "start transaction";
             sqlCommand.ExecuteNonQuery();
             try
             {
                 /*choix radius du role*/
                 string id_categorie;
-                if(radioButtonRSP.Checked == true)
+                if(radioButtonTRD.Checked == true)
                 {
                     id_categorie = "RES";
                 }
@@ -107,6 +106,7 @@ namespace WindowsFormsApp6
                 sqlCommand.CommandText = "commit";
                 sqlCommand.ExecuteNonQuery();
                 MessageBox.Show("L'utilisateur a été créer");
+                //MessageBox.Show(compte.Nom + "  " + compte.ID_Perso + " " + compte.Role);
                 this.Close();
             }
 

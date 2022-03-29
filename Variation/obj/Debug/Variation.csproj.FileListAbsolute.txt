@@ -8,3 +8,12 @@ C:\Users\victo\source\repos\PPE_Return\Variation\bin\Debug\MySql.Data.xml
 C:\Users\victo\source\repos\PPE_Return\Variation\obj\Debug\Variation.csproj.CopyComplete
 C:\Users\victo\source\repos\PPE_Return\Variation\obj\Debug\Variation.exe
 C:\Users\victo\source\repos\PPE_Return\Variation\obj\Debug\Variation.pdb
+C:\Users\nicol\source\repos\PPE_Return\Variation\bin\Debug\Variation.exe.config
+C:\Users\nicol\source\repos\PPE_Return\Variation\bin\Debug\Variation.exe
+C:\Users\nicol\source\repos\PPE_Return\Variation\bin\Debug\Variation.pdb
+C:\Users\nicol\source\repos\PPE_Return\Variation\bin\Debug\MySql.Data.xml
+C:\Users\nicol\source\repos\PPE_Return\Variation\obj\Debug\Variation.csproj.AssemblyReference.cache
+C:\Users\nicol\source\repos\PPE_Return\Variation\obj\Debug\Variation.csproj.CoreCompileInputs.cache
+C:\Users\nicol\source\repos\PPE_Return\Variation\obj\Debug\Variation.csproj.CopyComplete
+C:\Users\nicol\source\repos\PPE_Return\Variation\obj\Debug\Variation.exe
+C:\Users\nicol\source\repos\PPE_Return\Variation\obj\Debug\Variation.pdb
