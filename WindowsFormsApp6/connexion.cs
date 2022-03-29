@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.Cryptography;
 using MySql.Data.MySqlClient;
-using Lib;
 using libe;
 
 namespace WindowsFormsApp6
@@ -83,7 +82,7 @@ namespace WindowsFormsApp6
                                 /*recupération du role de l'utilisateur*/
                                 role = lecteur.GetString(4);
                             }
-                        MessageBox.Show("Bienvenue " + textBoxID.Text +" et l'ID est" + ID_perso + "et votre role est "+ role +".");                            
+                        MessageBox.Show("Bienvenue " + textBoxID.Text +" et l'ID est" + ID_perso + "et votre role est "+ role +".");
                         this.Close();
                         lecteur.Close();
                         }              

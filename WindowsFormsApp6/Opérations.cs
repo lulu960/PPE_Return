@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
+
 namespace WindowsFormsApp6
 {
     public partial class Opérations : Form
@@ -57,5 +58,7 @@ namespace WindowsFormsApp6
         {
 
         }
+
+
     }
 }

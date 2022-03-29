@@ -188,14 +188,14 @@ namespace WindowsFormsApp6
             // créationDesTablesToolStripMenuItem
             // 
             this.créationDesTablesToolStripMenuItem.Name = "créationDesTablesToolStripMenuItem";
-            this.créationDesTablesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.créationDesTablesToolStripMenuItem.Size = new System.Drawing.Size(219, 26);
             this.créationDesTablesToolStripMenuItem.Text = "Création des tables";
             this.créationDesTablesToolStripMenuItem.Click += new System.EventHandler(this.créationDesTablesToolStripMenuItem_Click);
             // 
             // remplirLesTablesToolStripMenuItem
             // 
             this.remplirLesTablesToolStripMenuItem.Name = "remplirLesTablesToolStripMenuItem";
-            this.remplirLesTablesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.remplirLesTablesToolStripMenuItem.Size = new System.Drawing.Size(219, 26);
             this.remplirLesTablesToolStripMenuItem.Text = "Remplir les tables";
             // 
             // label1

@@ -15,6 +15,7 @@ namespace WindowsFormsApp6
     public partial class salle_de_marché : Form
     {
         MySqlCommand sqlCommand;
+        internal static string roleform;
         public salle_de_marché()
         {
 
@@ -161,6 +162,8 @@ namespace WindowsFormsApp6
 
         }
 
-
+        private void label2_Click(object sender, EventArgs e)
+        {
+        }
     }
 }
