@@ -42,7 +42,7 @@ namespace WindowsFormsApp6
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.BackColor = System.Drawing.Color.Tomato;
             this.button3.Location = new System.Drawing.Point(229, 100);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(96, 22);
             this.button3.TabIndex = 15;
@@ -55,7 +55,7 @@ namespace WindowsFormsApp6
             this.btnVald.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnVald.BackColor = System.Drawing.Color.LawnGreen;
             this.btnVald.Location = new System.Drawing.Point(9, 100);
-            this.btnVald.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVald.Margin = new System.Windows.Forms.Padding(2);
             this.btnVald.Name = "btnVald";
             this.btnVald.Size = new System.Drawing.Size(92, 22);
             this.btnVald.TabIndex = 14;
@@ -83,7 +83,7 @@ namespace WindowsFormsApp6
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxMDP.Location = new System.Drawing.Point(112, 53);
-            this.textBoxMDP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxMDP.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxMDP.Name = "textBoxMDP";
             this.textBoxMDP.Size = new System.Drawing.Size(228, 20);
             this.textBoxMDP.TabIndex = 18;
@@ -95,7 +95,7 @@ namespace WindowsFormsApp6
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxID.Location = new System.Drawing.Point(112, 19);
-            this.textBoxID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxID.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxID.Name = "textBoxID";
             this.textBoxID.Size = new System.Drawing.Size(228, 20);
             this.textBoxID.TabIndex = 17;
@@ -127,12 +127,12 @@ namespace WindowsFormsApp6
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btnVald);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(363, 174);
             this.MinimumSize = new System.Drawing.Size(363, 174);
             this.Name = "connexion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form3";
+            this.Text = "connexion";
             this.Load += new System.EventHandler(this.connexion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

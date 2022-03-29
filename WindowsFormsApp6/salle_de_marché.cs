@@ -91,9 +91,20 @@ namespace WindowsFormsApp6
 
         private void personnelToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            connexion form3 = new connexion(sqlCommand);
-            form3.ShowDialog();
-            form3.Dispose();
+            connexion connexion = new connexion(sqlCommand);
+            connexion.ShowDialog();
+            int ID_User = connexion.getID();
+            if(ID_User > 0)
+            {
+                lblCompte.Text = ID_User.ToString();
+                lblCompte.BackColor = Color.Aqua;
+            }
+            else
+            {
+                lblCompte.Text = "Connectez vous";
+                lblCompte.BackColor = Color.Red;
+            }
+            connexion.Dispose();
         }
 
         private void testToolStripMenuItem_Click(object sender, EventArgs e)
@@ -120,7 +131,20 @@ namespace WindowsFormsApp6
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            connexion connexion = new connexion(sqlCommand);
+            connexion.ShowDialog();
+            int ID_User = connexion.getID();
+            if (ID_User > 0)
+            {
+                lblCompte.Text = ID_User.ToString();
+                lblCompte.BackColor = Color.Aqua;
+            }
+            else
+            {
+                lblCompte.Text = "Connectez vous";
+                lblCompte.BackColor = Color.Red;
+            }
+            connexion.Dispose();
         }
 
         private void visualiserLePersonnelToolStripMenuItem_Click(object sender, EventArgs e)
@@ -150,6 +174,11 @@ namespace WindowsFormsApp6
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCompte_Click(object sender, EventArgs e)
         {
 
         }

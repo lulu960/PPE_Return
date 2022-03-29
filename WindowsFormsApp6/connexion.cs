@@ -33,7 +33,7 @@ namespace WindowsFormsApp6
         {
 
         }
-
+        int ID_user = -1;
         private void button1_Click(object sender, EventArgs e)
         {
             MySqlDataReader lecteur;
@@ -66,7 +66,7 @@ namespace WindowsFormsApp6
                             /*recupération de l'id utilisateur*/
                             ID_perso = lecteur.GetInt32(2);
                         }
-                        compte.ID_Perso = ID_perso;
+                        ID_user = ID_perso;
                         lecteur.Close();
                     }
                     else
@@ -85,7 +85,7 @@ namespace WindowsFormsApp6
                             role = lecteur.GetString(4);
                         }
                         compte.Role = role;
-                        MessageBox.Show(compte.Nom + "  " + compte.ID_Perso + " " + compte.Role);
+                        MessageBox.Show(compte.Nom + "  " + ID_user + " " + compte.Role);
                         this.Close();
                         lecteur.Close();
                     }
@@ -99,6 +99,13 @@ namespace WindowsFormsApp6
                     lecteur.Close();
                 }
             }
+            
+        }
+        
+
+        public int getID()
+        {
+            return ID_user;
         }
 
         private void connexion_Load(object sender, EventArgs e)

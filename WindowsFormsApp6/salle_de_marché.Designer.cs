@@ -216,10 +216,12 @@ namespace WindowsFormsApp6
             this.lblCompte.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCompte.AutoSize = true;
             this.lblCompte.BackColor = System.Drawing.Color.Red;
-            this.lblCompte.Location = new System.Drawing.Point(461, 267);
+            this.lblCompte.Location = new System.Drawing.Point(438, 267);
             this.lblCompte.Name = "lblCompte";
-            this.lblCompte.Size = new System.Drawing.Size(0, 13);
+            this.lblCompte.Size = new System.Drawing.Size(53, 13);
             this.lblCompte.TabIndex = 2;
+            this.lblCompte.Text = "lblCompte";
+            this.lblCompte.Click += new System.EventHandler(this.lblCompte_Click);
             // 
             // salle_de_marché
             // 
@@ -232,6 +234,7 @@ namespace WindowsFormsApp6
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "salle_de_marché";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Salle de marché";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
