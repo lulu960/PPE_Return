@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.Cryptography;
 using MySql.Data.MySqlClient;
+using libe;
 
 namespace WindowsFormsApp6
 {
@@ -34,13 +35,11 @@ namespace WindowsFormsApp6
         int ID_user = -1;
         private void button1_Click(object sender, EventArgs e)
         {
-            /*On verifie si le mdp et le nom de compte est égal ou non si oui on le modifie*/
             MySqlDataReader lecteur;
-            sqlCommand.CommandText = "SELECT Nom , Mot_de_passe FROM ppe.personnel where Nom ='"+textBoxID.Text+"' AND Mot_de_passe = '"+textBoxMDP.Text+"';";
+            sqlCommand.CommandText = "SELECT Nom , Mot_de_passe FROM ppe.personnel where Binary Nom ='" + textBoxID.Text + "' AND Binary Mot_de_passe = '" + textBoxMDP.Text + "';";
             lecteur = sqlCommand.ExecuteReader();
             if (lecteur.HasRows)
             {
-                /*Si le mdp est égal au nom du compte alors on ouvre une page pour le changer*/
                 ChangementMDP ChangementMDP = new ChangementMDP(textBoxID.Text, sqlCommand);
                 lecteur.Close();
                 ChangementMDP.ShowDialog();
@@ -48,31 +47,47 @@ namespace WindowsFormsApp6
             }
             else
             {
-               lecteur.Close();
+                lecteur.Close();
                 try
                 {
                     int ID_perso = -1;
                     string role = null;
                     string source = textBoxMDP.Text;
-                    using (SHA512 sha512Hash = SHA512.Create())
+                    string mdp = Libe.Hash(source);
+                    sqlCommand.CommandText = "SELECT Nom , Mot_de_passe, ID_personnel FROM ppe.personnel where Nom ='" + textBoxID.Text + "' && Mot_de_passe = '" + mdp + "';";
+                    lecteur = sqlCommand.ExecuteReader();
+                    if (lecteur.HasRows)
                     {
-                        //From String to byte array
-                        byte[] sourceBytes = Encoding.UTF8.GetBytes(source);
-                        byte[] hashBytes = sha512Hash.ComputeHash(sourceBytes);
-                        string hash = BitConverter.ToString(hashBytes).Replace("-", String.Empty);
-                        sqlCommand.CommandText = "SELECT Nom , Mot_de_passe FROM ppe.personnel where Nom ='" + textBoxID.Text + "' && Mot_de_passe = '" + hash + "';";
-                        lecteur = sqlCommand.ExecuteReader();
-                        if (lecteur.HasRows)
+                        while (lecteur.Read())
                         {
-                            MessageBox.Show("Bienvenue " + textBoxID.Text + ".");
-                            this.Close();
-                            lecteur.Close();
+                            /*recupération de l'id utilisateur*/
+                            ID_perso = lecteur.GetInt32(2);
                         }
-                        else
+                        ID_user = ID_perso;
+                        lecteur.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Mot de passe ou identifiant incorrect");
+                        lecteur.Close();
+                    }
+
+                    sqlCommand.CommandText = "select * from personnel natural join attribuer where personnel.ID_personnel = " + ID_perso + ";";
+                    lecteur = sqlCommand.ExecuteReader();
+                    if (lecteur.HasRows)
+                    {
+                        while (lecteur.Read())
                         {
-                            MessageBox.Show("Mot de passe ou identifiant incorrect");
-                            lecteur.Close();
+                            /*recupération du role de l'utilisateur*/
+                            role = lecteur.GetString(4);
                         }
+                        MessageBox.Show("Bienvenue " + textBoxID.Text + " vous êtes " + role);
+                        this.Close();
+                        lecteur.Close();
+                    }
+                    else
+                    {
+                        lecteur.Close();
                     }
                 }
                 catch
@@ -80,9 +95,8 @@ namespace WindowsFormsApp6
                     lecteur.Close();
                 }
             }
-            
         }
-        
+
 
         public int getID()
         {
