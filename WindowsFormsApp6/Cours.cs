@@ -14,16 +14,22 @@ namespace WindowsFormsApp6
     public partial class Cours : Form
     {
         MySqlCommand sqlCommand;
+        MySqlCommand sqlC;
         public Cours(MySqlCommand sqlC)
         {
             InitializeComponent();
             sqlCommand = sqlC;
+            sqlC = Refresh(sqlC);
+            Cours_gridview.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            Cours_gridview.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+        }
+        MySqlCommand Refresh(MySqlCommand sqlC)
+        {
             MySqlDataAdapter sqlDa = new MySqlDataAdapter("Select * from libelles", sqlCommand.Connection);
             DataTable dt1 = new DataTable();
             sqlDa.Fill(dt1);
             Cours_gridview.DataSource = dt1;
-            Cours_gridview.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            Cours_gridview.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            return (sqlC);
         }
 
         private void Quitbtn_Click(object sender, EventArgs e)
@@ -33,7 +39,7 @@ namespace WindowsFormsApp6
 
         private void Refreshbtn_Click(object sender, EventArgs e)
         {
-           
+            sqlC = Refresh(sqlC);
         }
 
         private void Cours_gridview_CellContentClick(object sender, DataGridViewCellEventArgs e)

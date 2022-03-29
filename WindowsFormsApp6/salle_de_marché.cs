@@ -66,9 +66,6 @@ namespace WindowsFormsApp6
             string[] list = cripty(know, word);
             string user = list[0];
             string pwd = list[1];
-            Console.WriteLine(user);
-            Console.WriteLine(pwd);
-
             string connetionString = "server=78.123.62.241;uid=" + user+";password="+pwd+";database=ppe;";
             try
             {
