@@ -148,5 +148,19 @@ namespace WindowsFormsApp6
         {
 
         }
+
+        private void opérationsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Opérations operation = new Opérations(sqlCommand);
+            operation.ShowDialog();
+            operation.Dispose();
+        }
+
+        private void créationDesTablesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

@@ -76,6 +76,12 @@
     <Compile Include="Fiche_personnel.Designer.cs">
       <DependentUpon>Fiche_personnel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Opérations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Opérations.Designer.cs">
+      <DependentUpon>Opérations.cs</DependentUpon>
+    </Compile>
     <Compile Include="salle_de_marché.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Fiche_personnel.resx">
       <DependentUpon>Fiche_personnel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Opérations.resx">
+      <DependentUpon>Opérations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="salle_de_marché.resx">
       <DependentUpon>salle_de_marché.cs</DependentUpon>

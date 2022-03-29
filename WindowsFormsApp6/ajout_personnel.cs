@@ -86,6 +86,7 @@ namespace WindowsFormsApp6
                     sqlCommand.ExecuteNonQuery();
 
                 }
+
                 else
                 {
                     sqlCommand.CommandText = "INSERT INTO attribuer (ID_categorie, ID_personnel, date_debut) VALUES ('" + id_categorie + "'," + ID + ",'" + dateTimeDebut.Value.ToString("u").Substring(0, 19) + "')";
