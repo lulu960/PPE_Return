@@ -35,15 +35,16 @@ namespace WindowsFormsApp6
             this.label7 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.radioButtonTRD = new System.Windows.Forms.RadioButton();
+            this.radioButtonADM = new System.Windows.Forms.RadioButton();
+            this.radioButtonRSP = new System.Windows.Forms.RadioButton();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.checkBoxNoDate = new System.Windows.Forms.CheckBox();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -54,7 +55,7 @@ namespace WindowsFormsApp6
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 45);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
+            this.label1.Size = new System.Drawing.Size(50, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nom :";
             // 
@@ -66,7 +67,7 @@ namespace WindowsFormsApp6
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(9, 92);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 13);
+            this.label2.Size = new System.Drawing.Size(73, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Prénom :";
             // 
@@ -78,7 +79,7 @@ namespace WindowsFormsApp6
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(213, 226);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 13);
+            this.label5.Size = new System.Drawing.Size(83, 17);
             this.label5.TabIndex = 4;
             this.label5.Text = "Jusqu\'au :";
             // 
@@ -90,7 +91,7 @@ namespace WindowsFormsApp6
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(213, 175);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(68, 13);
+            this.label7.Size = new System.Drawing.Size(86, 17);
             this.label7.TabIndex = 6;
             this.label7.Text = "Depuis le :";
             // 
@@ -101,7 +102,7 @@ namespace WindowsFormsApp6
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(91, 40);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(585, 21);
+            this.textBox1.Size = new System.Drawing.Size(585, 24);
             this.textBox1.TabIndex = 7;
             // 
             // textBox2
@@ -111,30 +112,8 @@ namespace WindowsFormsApp6
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(91, 87);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(585, 21);
+            this.textBox2.Size = new System.Drawing.Size(585, 24);
             this.textBox2.TabIndex = 8;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(305, 170);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(371, 23);
-            this.comboBox1.TabIndex = 10;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(302, 221);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(374, 23);
-            this.comboBox2.TabIndex = 11;
             // 
             // button1
             // 
@@ -160,6 +139,7 @@ namespace WindowsFormsApp6
             this.button2.TabIndex = 13;
             this.button2.Text = "Réinitialiser le mot de passe";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -173,6 +153,7 @@ namespace WindowsFormsApp6
             this.button3.TabIndex = 14;
             this.button3.Text = "Supprimer";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -187,65 +168,92 @@ namespace WindowsFormsApp6
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // checkBox1
+            // radioButtonTRD
             // 
-            this.checkBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(24, 243);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.checkBox1.Size = new System.Drawing.Size(110, 17);
-            this.checkBox1.TabIndex = 16;
-            this.checkBox1.Text = "? Responsable";
-            this.checkBox1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.radioButtonTRD.AutoSize = true;
+            this.radioButtonTRD.Checked = true;
+            this.radioButtonTRD.Location = new System.Drawing.Point(15, 201);
+            this.radioButtonTRD.Margin = new System.Windows.Forms.Padding(4);
+            this.radioButtonTRD.Name = "radioButtonTRD";
+            this.radioButtonTRD.Size = new System.Drawing.Size(101, 21);
+            this.radioButtonTRD.TabIndex = 22;
+            this.radioButtonTRD.TabStop = true;
+            this.radioButtonTRD.Text = "Tradeur ?";
+            this.radioButtonTRD.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // radioButtonADM
             // 
-            this.checkBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Location = new System.Drawing.Point(17, 207);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.checkBox2.Size = new System.Drawing.Size(117, 17);
-            this.checkBox2.TabIndex = 17;
-            this.checkBox2.Text = "? Administrateur";
-            this.checkBox2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.radioButtonADM.AutoSize = true;
+            this.radioButtonADM.Location = new System.Drawing.Point(15, 173);
+            this.radioButtonADM.Margin = new System.Windows.Forms.Padding(4);
+            this.radioButtonADM.Name = "radioButtonADM";
+            this.radioButtonADM.Size = new System.Drawing.Size(148, 21);
+            this.radioButtonADM.TabIndex = 21;
+            this.radioButtonADM.Text = "Administrateur ?";
+            this.radioButtonADM.UseVisualStyleBackColor = true;
+            this.radioButtonADM.CheckedChanged += new System.EventHandler(this.radioButtonADM_CheckedChanged);
             // 
-            // checkBox3
+            // radioButtonRSP
             // 
-            this.checkBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox3.Location = new System.Drawing.Point(41, 170);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.checkBox3.Size = new System.Drawing.Size(93, 17);
-            this.checkBox3.TabIndex = 18;
-            this.checkBox3.Text = "? Suspendu";
-            this.checkBox3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.radioButtonRSP.AutoSize = true;
+            this.radioButtonRSP.Location = new System.Drawing.Point(15, 144);
+            this.radioButtonRSP.Margin = new System.Windows.Forms.Padding(4);
+            this.radioButtonRSP.Name = "radioButtonRSP";
+            this.radioButtonRSP.Size = new System.Drawing.Size(137, 21);
+            this.radioButtonRSP.TabIndex = 20;
+            this.radioButtonRSP.Text = "Responsable ?";
+            this.radioButtonRSP.UseVisualStyleBackColor = true;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CustomFormat = "yyyy/MM/dd HH:mm:ss";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(302, 173);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(388, 22);
+            this.dateTimePicker1.TabIndex = 23;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // checkBoxNoDate
+            // 
+            this.checkBoxNoDate.AutoSize = true;
+            this.checkBoxNoDate.Checked = true;
+            this.checkBoxNoDate.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxNoDate.Location = new System.Drawing.Point(295, 226);
+            this.checkBoxNoDate.Margin = new System.Windows.Forms.Padding(4);
+            this.checkBoxNoDate.Name = "checkBoxNoDate";
+            this.checkBoxNoDate.Size = new System.Drawing.Size(122, 21);
+            this.checkBoxNoDate.TabIndex = 27;
+            this.checkBoxNoDate.Text = "Non Spécifié";
+            this.checkBoxNoDate.UseVisualStyleBackColor = true;
+            this.checkBoxNoDate.CheckedChanged += new System.EventHandler(this.checkBoxNoDate_CheckedChanged);
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.CustomFormat = "yyyy/MM/dd HH:mm:ss";
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker2.Location = new System.Drawing.Point(425, 221);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(265, 22);
+            this.dateTimePicker2.TabIndex = 26;
+            this.dateTimePicker2.Visible = false;
             // 
             // Fiche_personnel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(705, 364);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
+            this.ClientSize = new System.Drawing.Size(703, 356);
+            this.Controls.Add(this.checkBoxNoDate);
+            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.radioButtonTRD);
+            this.Controls.Add(this.radioButtonADM);
+            this.Controls.Add(this.radioButtonRSP);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label7);
@@ -258,6 +266,7 @@ namespace WindowsFormsApp6
             this.Name = "Fiche_personnel";
             this.Text = "Fiche_personnel";
             this.Load += new System.EventHandler(this.Fiche_personnel_Load);
+            this.Leave += new System.EventHandler(this.Fiche_personnel_Leave);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -271,14 +280,15 @@ namespace WindowsFormsApp6
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.RadioButton radioButtonTRD;
+        private System.Windows.Forms.RadioButton radioButtonADM;
+        private System.Windows.Forms.RadioButton radioButtonRSP;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.CheckBox checkBoxNoDate;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
     }
 }

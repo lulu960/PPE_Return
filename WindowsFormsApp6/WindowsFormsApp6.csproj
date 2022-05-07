@@ -86,6 +86,12 @@
     <Compile Include="Opérations.Designer.cs">
       <DependentUpon>Opérations.cs</DependentUpon>
     </Compile>
+    <Compile Include="Quantité_operation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quantité_operation.Designer.cs">
+      <DependentUpon>Quantité_operation.cs</DependentUpon>
+    </Compile>
     <Compile Include="salle_de_marché.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vente.Designer.cs">
+      <DependentUpon>Vente.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="budgets.resx">
       <DependentUpon>budgets.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Opérations.resx">
       <DependentUpon>Opérations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quantité_operation.resx">
+      <DependentUpon>Quantité_operation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="salle_de_marché.resx">
       <DependentUpon>salle_de_marché.cs</DependentUpon>
@@ -149,6 +164,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Vente.resx">
+      <DependentUpon>Vente.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

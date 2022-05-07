@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Diagnostics;
 using System.Threading;
+using System.Runtime.InteropServices;
 
 namespace Variation
 {
+
     class Program
     {
+
         static void Main(string[] args)
         {
             MySqlCommand sqlCommand;
@@ -61,8 +64,6 @@ namespace Variation
             string[] list = cripty(know, word);
             string user = list[0];
             string pwd = list[1];
-            Console.WriteLine(user);
-            Console.WriteLine(pwd);
 
             string connetionString = "server=78.123.62.241;uid=" + user + ";password=" + pwd + ";database=ppe;";
             try
@@ -74,9 +75,9 @@ namespace Variation
                 {
                     Thread.Sleep(60000);
                         Console.WriteLine("cours a jour");
-                    sqlCommand.CommandText = "UPDATE libelles SET Cours = Cours + RAND() * (-0.05 - 0.05) + 0.05 ORDER BY RAND() LIMIT 442";
+                    sqlCommand.CommandText = "UPDATE libelles SET Cours = Cours + RAND() * (-0.05 - 0.05) + 0.05 ORDER BY RAND() LIMIT 40";
                     sqlCommand.ExecuteNonQuery();
-                    sqlCommand.CommandText = "UPDATE libelles SET Cours = 0.001 WHERE Cours< 0 ORDER BY RAND() LIMIT 442 ";
+                    sqlCommand.CommandText = "UPDATE libelles SET Cours = 0.001 WHERE Cours< 0 ORDER BY RAND() LIMIT 40 ";
                     sqlCommand.ExecuteNonQuery();
                 }
             }

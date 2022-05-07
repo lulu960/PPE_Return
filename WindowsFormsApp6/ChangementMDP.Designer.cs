@@ -40,43 +40,49 @@ namespace WindowsFormsApp6
             // lblNvMDP
             // 
             this.lblNvMDP.AutoSize = true;
-            this.lblNvMDP.Location = new System.Drawing.Point(39, 42);
+            this.lblNvMDP.Location = new System.Drawing.Point(52, 52);
+            this.lblNvMDP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNvMDP.Name = "lblNvMDP";
-            this.lblNvMDP.Size = new System.Drawing.Size(122, 13);
+            this.lblNvMDP.Size = new System.Drawing.Size(163, 17);
             this.lblNvMDP.TabIndex = 0;
             this.lblNvMDP.Text = "Changer mot de passe : ";
             // 
             // lblConfNvMDP
             // 
             this.lblConfNvMDP.AutoSize = true;
-            this.lblConfNvMDP.Location = new System.Drawing.Point(39, 86);
+            this.lblConfNvMDP.Location = new System.Drawing.Point(52, 106);
+            this.lblConfNvMDP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblConfNvMDP.Name = "lblConfNvMDP";
-            this.lblConfNvMDP.Size = new System.Drawing.Size(123, 13);
+            this.lblConfNvMDP.Size = new System.Drawing.Size(166, 17);
             this.lblConfNvMDP.TabIndex = 1;
             this.lblConfNvMDP.Text = "Confirmer mot de passe :";
             // 
             // textBoxNvMDP1
             // 
-            this.textBoxNvMDP1.Location = new System.Drawing.Point(178, 38);
+            this.textBoxNvMDP1.Location = new System.Drawing.Point(237, 47);
+            this.textBoxNvMDP1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxNvMDP1.Name = "textBoxNvMDP1";
-            this.textBoxNvMDP1.Size = new System.Drawing.Size(284, 20);
+            this.textBoxNvMDP1.Size = new System.Drawing.Size(377, 22);
             this.textBoxNvMDP1.TabIndex = 2;
             this.textBoxNvMDP1.UseSystemPasswordChar = true;
+            this.textBoxNvMDP1.TextChanged += new System.EventHandler(this.textBoxNvMDP1_TextChanged);
             // 
             // textBoxNvMDP2
             // 
-            this.textBoxNvMDP2.Location = new System.Drawing.Point(178, 82);
+            this.textBoxNvMDP2.Location = new System.Drawing.Point(237, 101);
+            this.textBoxNvMDP2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxNvMDP2.Name = "textBoxNvMDP2";
-            this.textBoxNvMDP2.Size = new System.Drawing.Size(284, 20);
+            this.textBoxNvMDP2.Size = new System.Drawing.Size(377, 22);
             this.textBoxNvMDP2.TabIndex = 3;
             this.textBoxNvMDP2.UseSystemPasswordChar = true;
             // 
             // btnEnregistreNvMDP
             // 
             this.btnEnregistreNvMDP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnEnregistreNvMDP.Location = new System.Drawing.Point(269, 113);
+            this.btnEnregistreNvMDP.Location = new System.Drawing.Point(359, 139);
+            this.btnEnregistreNvMDP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEnregistreNvMDP.Name = "btnEnregistreNvMDP";
-            this.btnEnregistreNvMDP.Size = new System.Drawing.Size(96, 27);
+            this.btnEnregistreNvMDP.Size = new System.Drawing.Size(128, 33);
             this.btnEnregistreNvMDP.TabIndex = 4;
             this.btnEnregistreNvMDP.Text = "Modifier";
             this.btnEnregistreNvMDP.UseVisualStyleBackColor = true;
@@ -85,9 +91,10 @@ namespace WindowsFormsApp6
             // cbxVisibleMDP
             // 
             this.cbxVisibleMDP.AutoSize = true;
-            this.cbxVisibleMDP.Location = new System.Drawing.Point(477, 40);
+            this.cbxVisibleMDP.Location = new System.Drawing.Point(636, 49);
+            this.cbxVisibleMDP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbxVisibleMDP.Name = "cbxVisibleMDP";
-            this.cbxVisibleMDP.Size = new System.Drawing.Size(128, 17);
+            this.cbxVisibleMDP.Size = new System.Drawing.Size(167, 21);
             this.cbxVisibleMDP.TabIndex = 5;
             this.cbxVisibleMDP.Text = "Afficher mot de passe";
             this.cbxVisibleMDP.UseVisualStyleBackColor = true;
@@ -95,15 +102,16 @@ namespace WindowsFormsApp6
             // 
             // ChangementMDP
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(630, 152);
+            this.ClientSize = new System.Drawing.Size(840, 187);
             this.Controls.Add(this.cbxVisibleMDP);
             this.Controls.Add(this.btnEnregistreNvMDP);
             this.Controls.Add(this.textBoxNvMDP2);
             this.Controls.Add(this.textBoxNvMDP1);
             this.Controls.Add(this.lblConfNvMDP);
             this.Controls.Add(this.lblNvMDP);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ChangementMDP";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Changement de mot de passe";

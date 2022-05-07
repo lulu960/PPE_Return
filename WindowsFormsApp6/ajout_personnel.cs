@@ -14,7 +14,6 @@ namespace WindowsFormsApp6
     public partial class ajout_personnel : Form
     {
         MySqlCommand sqlCommand;
-        string dataBaseName;
         public ajout_personnel(MySqlCommand sqlC)
         {
             InitializeComponent();
@@ -56,7 +55,7 @@ namespace WindowsFormsApp6
                 string id_categorie;
                 if(radioButtonTRD.Checked == true)
                 {
-                    id_categorie = "RES";
+                    id_categorie = "TRD";
                 }
                 else if (radioButtonADM.Checked == true)
                 {
@@ -64,7 +63,7 @@ namespace WindowsFormsApp6
                 }
                 else
                 {
-                    id_categorie = "TRD";
+                    id_categorie = "RES";
                 }
                 int ID = -1;
                 /*création du compte dans la bdd avec mdp = nom*/
@@ -131,6 +130,26 @@ namespace WindowsFormsApp6
             {
                 dateTimeFin.Visible = true;
             }
+        }
+
+        private void radioButtonTRD_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButtonADM_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButtonRSP_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimeFin_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

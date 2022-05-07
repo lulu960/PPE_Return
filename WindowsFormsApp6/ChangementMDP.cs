@@ -16,7 +16,6 @@ namespace WindowsFormsApp6
     public partial class ChangementMDP : Form
     {
         MySqlCommand sqlCommand;
-        string dataBaseName;
         string IDEnregistree;
         public ChangementMDP(string ID, MySqlCommand sqlC)
         {
@@ -68,6 +67,11 @@ namespace WindowsFormsApp6
             {
                 textBoxNvMDP1.UseSystemPasswordChar = true;
             }
+        }
+
+        private void textBoxNvMDP1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
     }

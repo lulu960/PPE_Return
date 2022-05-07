@@ -38,19 +38,23 @@ namespace WindowsFormsApp6
             // Cours_gridview
             // 
             this.Cours_gridview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Cours_gridview.Location = new System.Drawing.Point(12, 12);
+            this.Cours_gridview.Location = new System.Drawing.Point(16, 15);
+            this.Cours_gridview.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Cours_gridview.Name = "Cours_gridview";
-            this.Cours_gridview.Size = new System.Drawing.Size(776, 373);
+            this.Cours_gridview.RowHeadersWidth = 51;
+            this.Cours_gridview.Size = new System.Drawing.Size(1035, 459);
             this.Cours_gridview.TabIndex = 0;
+            this.Cours_gridview.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Cours_gridview_CellClick);
             this.Cours_gridview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Cours_gridview_CellContentClick);
             // 
             // Refreshbtn
             // 
             this.Refreshbtn.BackColor = System.Drawing.Color.LightSkyBlue;
             this.Refreshbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Refreshbtn.Location = new System.Drawing.Point(12, 402);
+            this.Refreshbtn.Location = new System.Drawing.Point(16, 495);
+            this.Refreshbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Refreshbtn.Name = "Refreshbtn";
-            this.Refreshbtn.Size = new System.Drawing.Size(164, 36);
+            this.Refreshbtn.Size = new System.Drawing.Size(219, 44);
             this.Refreshbtn.TabIndex = 1;
             this.Refreshbtn.Text = "Rafraîchir";
             this.Refreshbtn.UseVisualStyleBackColor = false;
@@ -60,9 +64,10 @@ namespace WindowsFormsApp6
             // 
             this.Quitbtn.BackColor = System.Drawing.Color.IndianRed;
             this.Quitbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Quitbtn.Location = new System.Drawing.Point(624, 402);
+            this.Quitbtn.Location = new System.Drawing.Point(832, 495);
+            this.Quitbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Quitbtn.Name = "Quitbtn";
-            this.Quitbtn.Size = new System.Drawing.Size(164, 36);
+            this.Quitbtn.Size = new System.Drawing.Size(219, 44);
             this.Quitbtn.TabIndex = 2;
             this.Quitbtn.Text = "Quitter";
             this.Quitbtn.UseVisualStyleBackColor = false;
@@ -70,12 +75,13 @@ namespace WindowsFormsApp6
             // 
             // Cours
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.Quitbtn);
             this.Controls.Add(this.Refreshbtn);
             this.Controls.Add(this.Cours_gridview);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Cours";
             this.Text = "Cours";
             this.Load += new System.EventHandler(this.Cours_Load);

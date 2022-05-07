@@ -22,6 +22,10 @@ namespace WindowsFormsApp6
             sqlC = Refresh(sqlC);
             Cours_gridview.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             Cours_gridview.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Cours_gridview.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            Cours_gridview.AllowUserToAddRows = false;
+            Cours_gridview.AllowUserToDeleteRows = false;
+            Cours_gridview.ReadOnly = true;
         }
         MySqlCommand Refresh(MySqlCommand sqlC)
         {
@@ -48,6 +52,11 @@ namespace WindowsFormsApp6
         }
 
         private void Cours_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Cours_gridview_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
