@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Diagnostics;
+using System.Reflection;
 
 namespace WindowsFormsApp6
 {
@@ -320,8 +321,11 @@ namespace WindowsFormsApp6
 
         private Process start_variation()
         {
+            string execPath = AppDomain.CurrentDomain.BaseDirectory;
+            //MessageBox.Show(execPath);
             Process process = new Process();
-            process.StartInfo.FileName = @"C:\\Users\\lucas\\source\\repos\\sdm\\Variation\\bin\\Release\\Variation.exe";
+            process.StartInfo.FileName = execPath+"\\Variation\\Variation.exe";
+            MessageBox.Show(execPath);
             process.Start();
             return process;
         }

@@ -73,7 +73,7 @@ namespace Variation
                 sqlCommand = cnn.CreateCommand();
                 while(true)
                 {
-                    Thread.Sleep(60000);
+                    Thread.Sleep(10000);
                         Console.WriteLine("cours a jour");
                     sqlCommand.CommandText = "UPDATE libelles SET Cours = Cours + RAND() * (-0.05 - 0.05) + 0.05 ORDER BY RAND() LIMIT 40";
                     sqlCommand.ExecuteNonQuery();

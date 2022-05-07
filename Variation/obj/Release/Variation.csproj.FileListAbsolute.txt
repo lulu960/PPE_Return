@@ -18,3 +18,13 @@ C:\Users\lucas\source\repos\sdm\Variation\obj\Release\Variation.csproj.CoreCompi
 C:\Users\lucas\source\repos\sdm\Variation\obj\Release\Variation.csproj.CopyComplete
 C:\Users\lucas\source\repos\sdm\Variation\obj\Release\Variation.exe
 C:\Users\lucas\source\repos\sdm\Variation\obj\Release\Variation.pdb
+C:\Users\victo\source\repos\lulu960\PPE_Return\Variation\bin\Release\Variation.exe.config
+C:\Users\victo\source\repos\lulu960\PPE_Return\Variation\bin\Release\Variation.exe
+C:\Users\victo\source\repos\lulu960\PPE_Return\Variation\bin\Release\Variation.pdb
+C:\Users\victo\source\repos\lulu960\PPE_Return\Variation\bin\Release\MySql.Data.xml
+C:\Users\victo\source\repos\lulu960\PPE_Return\Variation\obj\Release\Variation.csproj.AssemblyReference.cache
+C:\Users\victo\source\repos\lulu960\PPE_Return\Variation\obj\Release\Variation.csproj.SuggestedBindingRedirects.cache
+C:\Users\victo\source\repos\lulu960\PPE_Return\Variation\obj\Release\Variation.csproj.CoreCompileInputs.cache
+C:\Users\victo\source\repos\lulu960\PPE_Return\Variation\obj\Release\Variation.csproj.CopyComplete
+C:\Users\victo\source\repos\lulu960\PPE_Return\Variation\obj\Release\Variation.exe
+C:\Users\victo\source\repos\lulu960\PPE_Return\Variation\obj\Release\Variation.pdb

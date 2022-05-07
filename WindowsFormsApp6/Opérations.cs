@@ -22,6 +22,7 @@ namespace WindowsFormsApp6
         float budget_dispo;
         public Opérations(MySqlCommand sqlC)
         {
+            InitTimer();
             salle_de_marché sdl = new salle_de_marché();
             id1 = sdl.getID();
             sdl.Dispose();
@@ -59,6 +60,20 @@ namespace WindowsFormsApp6
                 column.SortMode = DataGridViewColumnSortMode.NotSortable;
             }
             
+        }
+
+        private Timer timer1;
+        public void InitTimer()
+        {
+            timer1 = new Timer();
+            timer1.Tick += new EventHandler(refreshdata);
+            timer1.Interval = 5000;
+            timer1.Start();
+        }
+
+        private void refreshdata(object sender, EventArgs e)
+        {
+            Refresh(sqlCommand);
         }
         MySqlCommand Refresh(MySqlCommand sqlC)
         {
