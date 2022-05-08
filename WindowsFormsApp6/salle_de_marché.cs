@@ -325,7 +325,7 @@ namespace WindowsFormsApp6
             //MessageBox.Show(execPath);
             Process process = new Process();
             process.StartInfo.FileName = execPath+"\\Variation\\Variation.exe";
-            MessageBox.Show(execPath);
+            process.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
             process.Start();
             return process;
         }
