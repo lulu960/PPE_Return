@@ -152,3 +152,5 @@ C:\Users\victo\source\repos\lulu960\PPE_Return\WindowsFormsApp6\obj\Debug\Window
 C:\Users\victo\source\repos\lulu960\PPE_Return\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.csproj.CopyComplete
 C:\Users\victo\source\repos\lulu960\PPE_Return\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.exe
 C:\Users\victo\source\repos\lulu960\PPE_Return\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.pdb
+C:\Users\lucas\source\repos\PPE_Return\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.Quantité_operation.resources
+C:\Users\lucas\source\repos\PPE_Return\WindowsFormsApp6\obj\Debug\WindowsFormsApp6.Vente.resources

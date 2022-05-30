@@ -65,7 +65,7 @@ namespace Variation
             string user = list[0];
             string pwd = list[1];
 
-            string connetionString = "server=78.123.62.241;uid=" + user + ";password=" + pwd + ";database=ppe;";
+            string connetionString = "server=78.123.60.28;uid=" + user + ";password=" + pwd + ";database=ppe;";
             try
             {
                 MySqlConnection cnn = new MySqlConnection(connetionString);
